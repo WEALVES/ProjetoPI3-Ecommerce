@@ -1,4 +1,4 @@
-# ProjetoPI2-
+# ProjetoPI3° Sem-
 Projeto Integrador: Desenvolvimento de Sistemas Orientado a Objetos
 Lista de Funcionalidades - E-Commerc de Informática
 - Login ou cadastro
