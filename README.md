@@ -20,3 +20,7 @@ Kayque Fernandes Melo
 Lucas de Jesus Silva
 Lucas Ferreira Silva
 Wellington Alves
+
+# Diagrama Entidade Relacionamento
+
+![Diagrama_mer](https://user-images.githubusercontent.com/99514168/222869068-493d71bb-a8dd-4e8c-b857-79cfae739f89.png)
