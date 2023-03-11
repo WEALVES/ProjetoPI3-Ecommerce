@@ -14,13 +14,24 @@ Lista de Funcionalidades - E-Commerc de Informática
 - pagina de pagamento
 - Historico de compras
 - Página de Suporte ao Cliente
-Integrantes do Grupo
-João Vitor Estevam
-Kayque Fernandes Melo
-Lucas de Jesus Silva
-Lucas Ferreira Silva
-Wellington Alves
+
+
+### Integrantes do Grupo
+- João Vitor Estevam
+- Kayque Fernandes Melo
+- Lucas de Jesus Silva
+- Lucas Ferreira Silva
+- Wellington Alves
 
 # Diagrama Entidade Relacionamento
 
-![Diagrama_mer](https://user-images.githubusercontent.com/99514168/222869068-493d71bb-a8dd-4e8c-b857-79cfae739f89.png)
+![Diagrama_mer](./Docs/DiagramaMer/DiagramaMerIMG.png)
+
+
+# Protótipos das páginas
+
+### - Página de Login
+![Página de Login](./Docs/Prot%C3%B3tipos/PageLogin.PNG)
+
+### - Página de Criação de conta
+![Página de Criação de Login](./Docs/Prot%C3%B3tipos/PageCreateAccount.PNG)
