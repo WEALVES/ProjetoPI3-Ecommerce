@@ -24,3 +24,11 @@ Wellington Alves
 # Diagrama Entidade Relacionamento
 
 ![Diagrama_mer](https://user-images.githubusercontent.com/99514168/222869068-493d71bb-a8dd-4e8c-b857-79cfae739f89.png)
+
+# Protótipos
+
+### Página de carrinho de compras
+![Diagrama_mer](./Docs/Prot%C3%B3tipos/Carrinho%20de%20compras.PNG)
+
+### Página de histórico de compras
+![Diagrama_mer](./Docs/Prot%C3%B3tipos/Historico%20de%20compras.PNG)
