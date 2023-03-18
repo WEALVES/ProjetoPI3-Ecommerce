@@ -25,7 +25,8 @@ Lista de Funcionalidades - E-Commerc de Informática
 
 # Diagrama Entidade Relacionamento
 
-![Diagrama_mer](./Docs/DiagramaMer/DiagramaMerIMG.png)
+
+![Diagrama_mer](https://user-images.githubusercontent.com/99514168/222869068-493d71bb-a8dd-4e8c-b857-79cfae739f89.png)
 
 
 # Protótipos das páginas
@@ -44,3 +45,5 @@ Lista de Funcionalidades - E-Commerc de Informática
 
 ### - Página de produtos
 ![Página de produtos](./Docs/Prototipos/TelaProdutos.png)
+
+
