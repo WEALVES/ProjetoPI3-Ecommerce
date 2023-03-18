@@ -17,11 +17,11 @@ Lista de Funcionalidades - E-Commerc de Informática
 
 
 ### Integrantes do Grupo
-- João Vitor Estevam
-- Kayque Fernandes Melo
-- Lucas de Jesus Silva
-- Lucas Ferreira Silva
-- Wellington Alves
+- João Vitor Estevam - estevam99
+- Kayque Fernandes Melo GitHub: kayqemelo
+- Lucas de Jesus Silva - GitHub: LucasJesus17
+- Lucas Ferreira Silva - GitHub: LucasLfs2004
+- Wellington Alves - GitHub: WEALVES
 
 # Diagrama Entidade Relacionamento
 
@@ -39,8 +39,17 @@ Lista de Funcionalidades - E-Commerc de Informática
 
 # Protótipos das páginas
 
-### - Página de Login
-![Página de Login](./Docs/Prot%C3%B3tipos/PageLogin.PNG)
+### - Página de login
+![Página de Login](./Docs/Prototipos/PageLogin.png)
 
-### - Página de Criação de conta
-![Página de Criação de Login](./Docs/Prot%C3%B3tipos/PageCreateAccount.PNG)
+### - Página de criação de conta
+![Página de Criação de Login](./Docs/Prototipos/PageCreateAccount.png)
+
+### - Tela de cadastro de produtos
+![Página de Cadastro de Produtos](./Docs/Prototipos/CadastroProduto.png)
+
+### - Página principal
+![Página inicial](./Docs/Prototipos/TelaPrincipal.png)
+
+### - Página de produtos
+![Página de produtos](./Docs/Prototipos/TelaProdutos.png)
