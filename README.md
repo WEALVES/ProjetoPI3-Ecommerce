@@ -17,8 +17,8 @@ Lista de Funcionalidades - E-Commerc de Informática
 
 
 ### Integrantes do Grupo
-- João Vitor Estevam - estevam99
-- Kayque Fernandes Melo GitHub: kayqemelo
+- João Vitor Estevam - GitHub estevam99
+- Kayque Fernandes Melo - GitHub: kayqemelo
 - Lucas de Jesus Silva - GitHub: LucasJesus17
 - Lucas Ferreira Silva - GitHub: LucasLfs2004
 - Wellington Alves - GitHub: WEALVES
@@ -46,4 +46,13 @@ Lista de Funcionalidades - E-Commerc de Informática
 ### - Página de produtos
 ![Página de produtos](./Docs/Prototipos/TelaProdutos.png)
 
+### - Carrinho de compras
+![Página de carrinho de compras](./Docs/Prototipos/CarrinhoCompras.png)
 
+### - Histórico de compras
+![Página de histórico de compras](./Docs/Prototipos/HistoricoCompras.png)
+
+### - Minha conta
+![Página minha conta](./Docs/Prototipos/MinhaConta.png)
+
+## [Link dos protótipos no FIGMA](https://www.figma.com/file/QCVCo9zzUu166ASxhm5xYO/Login%2FCadastro%2FCadastroProdutos?node-id=0%3A1&t=YhoIPclcfKGg73mN-1)
