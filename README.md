@@ -55,4 +55,7 @@ Lista de Funcionalidades - E-Commerc de Informática
 ### - Minha conta
 ![Página minha conta](./Docs/Prototipos/MinhaConta.png)
 
+### - Minha conta part II
+![Página minha conta](./Docs/Prototipos/TELA_MINHA_CONTA.PNG)
+
 ## [Link dos protótipos no FIGMA](https://www.figma.com/file/QCVCo9zzUu166ASxhm5xYO/Login%2FCadastro%2FCadastroProdutos?node-id=0%3A1&t=YhoIPclcfKGg73mN-1)
