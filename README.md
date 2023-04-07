@@ -59,3 +59,23 @@ Lista de Funcionalidades - E-Commerc de Informática
 ![Página minha conta](./Docs/Prototipos/TELA_MINHA_CONTA.PNG)
 
 ## [Link dos protótipos no FIGMA](https://www.figma.com/file/QCVCo9zzUu166ASxhm5xYO/Login%2FCadastro%2FCadastroProdutos?node-id=0%3A1&t=YhoIPclcfKGg73mN-1)
+
+# ADO Entrega para dia 09/04
+
+### Para a realização da ado a tela selecionada para fazer a comunicação com o banco de dados foi a tela de cadastro de usuário
+
+## Script do banco de dados: 
+
+CREATE TABLE USUARIO(
+  ID INT PRIMARY KEY AUTO_INCREMENT, 
+  NAME VARCHAR(255),
+  DATA_NASCIMENTO VARCHAR(10),
+  CPF VARCHAR(15),
+  EMAIL VARCHAR(70),
+  SENHA VARCHAR(50),
+  ENDERECO VARCHAR(100),
+  CEP VARCHAR(9)
+);
+
+
+#### As outras telas ainda estão em construção, por isso a a única aparente no momento é a tela de cadastro de usuário.

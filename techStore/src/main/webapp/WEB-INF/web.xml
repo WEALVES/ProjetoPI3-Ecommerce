@@ -4,7 +4,7 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <display-name>car-store</display-name>
+  <display-name>tech-store</display-name>
 
   <listener>
     <listener-class>org.h2.server.web.DbStarter</listener-class>
