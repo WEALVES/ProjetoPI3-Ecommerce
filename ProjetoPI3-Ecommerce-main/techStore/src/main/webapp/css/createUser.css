@@ -1,0 +1,80 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #454545;
+  color: #5200ff;
+  flex: 1;
+}
+
+.centralizer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#card-create-user {
+  border-radius: 45px;
+  background-color: #d9d9d9;
+  width: 1000px;
+  height: 725px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  padding: 44px 54px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  width: 429px;
+}
+
+.input {
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(192, 161, 255, 0.22);
+  height: 55px;
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  border: none;
+  background-color: #5200ff;
+  border-radius: 30px;
+  width: 429px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #F5F5F5;
+}
