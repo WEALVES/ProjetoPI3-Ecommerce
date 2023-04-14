@@ -27,10 +27,10 @@ public class UserDao {
 
             preparedStatement.execute();
             connection.close();
-            System.out.println("Success in connection");
+            System.out.println("Success in connection.");
 
         } catch (Exception e) {
-            System.out.println("fail in connection");
+            System.out.println("fail in connection.");
         }
     }
 }

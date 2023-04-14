@@ -9,8 +9,5 @@
         <module name="techStore" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="carsoft" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>
