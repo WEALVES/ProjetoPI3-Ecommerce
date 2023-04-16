@@ -60,6 +60,19 @@ Lista de Funcionalidades - E-Commerc de Informática
 
 ## [Link dos protótipos no FIGMA](https://www.figma.com/file/QCVCo9zzUu166ASxhm5xYO/Login%2FCadastro%2FCadastroProdutos?node-id=0%3A1&t=YhoIPclcfKGg73mN-1)
 
+
+# - Identidade visual
+- Paleta de cores
+![Paleta de cores](https://user-images.githubusercontent.com/99226403/232334571-88d769a9-a8da-44bf-b913-eebe5a1da223.PNG)
+
+- Logotipos:
+![Logo_01](https://user-images.githubusercontent.com/99226403/232334457-e932eb51-83d4-44fa-a2bb-12c6e7b41385.png)
+![Logo_02](https://user-images.githubusercontent.com/99226403/232334459-ce548ded-ffcf-464e-9860-cc168094d4ac.png) 
+![Prancheta 6_2](https://user-images.githubusercontent.com/99226403/232334613-397881b5-57a1-4315-a013-71afabab8281.png)
+
+-  ## [Link arquivos identidade visual](https://encurtador.com.br/yz036)
+- ## [Cores em HEXA](https://encurtador.com.br/cmzAE)
+
 # ADO Entrega para dia 09/04
 
 ### Para a realização da ado a tela selecionada para fazer a comunicação com o banco de dados foi a tela de cadastro de usuário
