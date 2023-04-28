@@ -18,19 +18,18 @@
         </div>
 
     </div>
- 
+    <form class="form" action="/create-produto" method="post">
     <div class="loginBox">
-        <input type="text" class="input" placeholder="Nome Do Produto">
-        <input type="number" class="input" placeholder="Preço da Unidade">
-        <input type="number" class="input" placeholder="Quantidade">
-        <input type="text" class="input" placeholder="Fabricante">
-        <input type="text" class="input" placeholder="Marca">
+        <input type="text" class="input" name="nome" id="nome" placeholder="Nome Do Produto">
+        <input type="number" class="input" name="preco" id="preco" placeholder="Preço da Unidade">
+        <input type="number" class="input" name="quantidade" id="quantidade" placeholder="Quantidade">
+        <input type="text" class="input" name="fabricante" id="fabricante" placeholder="Fabricante">
+        <input type="text" class="input" name="marca" id="marca" placeholder="Marca">
         <input type="number" class="input" placeholder="ID">
-        <input type="text" class="input" placeholder="Descrição do produto">
+        <input type="text" class="input" name="descricao" id="descricao" placeholder="Descrição do produto">
         <input type="search"  class="input" placeholder="Imagem">
     </div>
-    <div class="buttonLogin">
-        Adicionar produto
-    </div>
+        <button type="submit">Adicionar Produto</button>
+        </form>
 </body>
 </html>
