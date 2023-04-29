@@ -58,15 +58,16 @@ public class UserDao {
 
                 String userName = resultSet.getString("name");
                 String senha1 = resultSet.getString("senha");
+                String senha2 = resultSet.getString("senha");
                 String userNascimento = resultSet.getString("nascimento");
                 String userCpf = resultSet.getString("cpf");
                 String userEndereco = resultSet.getString("endereco");
                 String userEmail = resultSet.getString("email");
                 String userCep = resultSet.getString("cep");
 
-                User user = new User(userName, senha1, userNascimento, userCpf, userEndereco, userEmail,userCep);
+                    User user = new User(userName, senha1, userNascimento, userCpf, userEndereco, userEmail, userCep);
 
-                users.add(user);
+                    users.add(user);
 
             }
 

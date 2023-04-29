@@ -29,7 +29,7 @@ public class CreateAccountServlet extends HttpServlet {
 
             new UserDao().createUser(user);
 
-        resp.sendRedirect("/find-all-users");
+        resp.sendRedirect("index.jsp");
 
     }
 

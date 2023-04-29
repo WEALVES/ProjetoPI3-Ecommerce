@@ -1,7 +1,7 @@
 package br.com.techstore.model;
 
 public class Produto {
-    private String Nome;
+    private String nome;
     private String categoria;
     private String fabricante;
     private String marca;
@@ -10,7 +10,7 @@ public class Produto {
     private String quatidade;
 
     public Produto(String nome, String categoria, String fabricante, String marca, String preco, String descricao, String quatidade) {
-        Nome = nome;
+        this.nome = nome;
         this.categoria = categoria;
         this.fabricante = fabricante;
         this.marca = marca;
@@ -44,6 +44,6 @@ public class Produto {
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 }

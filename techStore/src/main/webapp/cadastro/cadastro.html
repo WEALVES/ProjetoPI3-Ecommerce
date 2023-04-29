@@ -19,18 +19,18 @@
             </div>
         </div>
     </div>
- 
+    <form class="form" action="/create-user" method="post">
     <div class="loginBox">
-        <input type="text" class="input" placeholder="Nome Completo">
-        <input type="password" class="input" placeholder="SENHA">
+        <input type="text" class="input" name="user-name" id="user-name" placeholder="Nome Completo">
+        <input type="password" class="input" name="senha-1" id="senha-1" placeholder="SENHA">
         <input type="password" class="input" placeholder="CONFIRMAR SENHA">
-        <input type="number" class="input" placeholder="CPF">
-        <input type="text" class="input" placeholder="Endereço">
-        <input type="number" class="input" placeholder="CEP">
-        <input type="email" class="input" placeholder="EMAIL">
+        <input type="number" class="input" name="user-cpf" id="user-cpf" placeholder="CPF">
+        <input type="text" class="input" name="user-nascimento" id="user-nascimento" placeholder="Data de Nascimento">
+        <input type="text" class="input" name="user-endereco" id="user-endereco" placeholder="Endereço">
+        <input type="number" class="input" name="user-cep" id="user-cep" placeholder="CEP">
+        <input type="email" class="input" name="user-email" id="user-email" placeholder="EMAIL">
     </div>
-    <div class="buttonLogin">
-        ENTRAR
-    </div>
+        <button  class="buttonLogin" type="submit">Cadastrar</button>
+    </form>
 </body>
 </html>

@@ -22,7 +22,7 @@ public class ListProdutoServlet extends HttpServlet {
 
         req.setAttribute("produtos", produtos);
 
-        req.getRequestDispatcher("").forward(req, resp);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
 
     }
 }

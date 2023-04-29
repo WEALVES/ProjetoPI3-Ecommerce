@@ -61,7 +61,7 @@ public class ProdutoDao {
 
             while (resultSet.next()) {
 
-                String nome = resultSet.getString("produto");
+                String nome = resultSet.getString("nome");
                 String categoria = resultSet.getString("categoria");
                 String fabricante = resultSet.getString("fabricante");
                 String marca = resultSet.getString("marca");
