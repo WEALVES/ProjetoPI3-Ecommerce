@@ -73,10 +73,6 @@ Lista de Funcionalidades - E-Commerc de Informática
 -  ## [Link arquivos identidade visual](https://encurtador.com.br/yz036)
 - ## [Cores em HEXA](https://encurtador.com.br/cmzAE)
 
-# ADO Entrega para dia 09/04
-
-### Para a realização da ado a tela selecionada para fazer a comunicação com o banco de dados foi a tela de cadastro de usuário
-
 ## Script do banco de dados: 
 
 CREATE TABLE USUARIO(
