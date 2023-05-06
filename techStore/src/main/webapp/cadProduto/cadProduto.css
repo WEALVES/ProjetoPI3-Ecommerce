@@ -59,18 +59,18 @@
 
 .buttonLogin{
     width: 900px;
-    height: 25px;
+    height: auto;
     background-color: rgb(150, 91, 245);
     font-size: 18px;
     border-radius: 12px;
     color: white;
     border: none;
     margin: auto;
-
     text-align: center;
     padding: 15px;
     transition: transform .1s;
+    cursor: pointer;
 }
 .buttonLogin:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
 }

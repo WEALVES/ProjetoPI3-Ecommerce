@@ -16,7 +16,7 @@ import java.util.List;
 public class ProdutoDao {
 
     public void createProduto(Produto produto) {
-        String SQL = "INSERT INTO PRODUTO (NOME, CATEGORIA, FABRICANTE, MARCA, PRECO, DESCRICAO, QUANTIDADE) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO PRODUTO (NOME, CATEGORIA, FABRICANTE, MARCA, PRECO, DESCRICAO, QUANTIDADE, IMAGEM) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             Connection connection = DriverManager.getConnection(
@@ -33,6 +33,7 @@ public class ProdutoDao {
             preparedStatement.setString(5, produto.getPreco());
             preparedStatement.setString(6, produto.getDescricao());
             preparedStatement.setString(7, produto.getQuatidade());
+            preparedStatement.setString(8, produto.getImagem());
             preparedStatement.execute();
             connection.close();
 
@@ -68,8 +69,9 @@ public class ProdutoDao {
                 String preco = resultSet.getString("preco");
                 String descricao = resultSet.getString("descricao");
                 String quantidade = resultSet.getString("quantidade");
+                String imagem = resultSet.getString("imagem");
 
-                Produto produto = new Produto(nome, categoria, fabricante, marca, preco, descricao, quantidade);
+                Produto produto = new Produto(nome, categoria, fabricante, marca, preco, descricao, quantidade, imagem);
 
                 produtos.add(produto);
 
