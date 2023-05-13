@@ -1,0 +1,7 @@
+br\com\techStore\servlet\CreateAccountServlet.class
+br\com\techStore\model\Produto.class
+br\com\techStore\model\User.class
+br\com\techStore\dao\UserDao.class
+br\com\techStore\servlet\ListProdutoServlet.class
+br\com\techStore\dao\ProdutoDao.class
+br\com\techStore\servlet\CreateProdutoServlet.class

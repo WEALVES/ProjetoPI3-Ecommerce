@@ -9,7 +9,11 @@ public class User {
     private String endereco;
     private String cep;
 
-    public User(String name, String nascimento, String cpf, String email, String senha, String endereco, String cep, String image) {
+    public User() {
+
+    }
+
+    public User(String name, String nascimento, String cpf, String email, String senha, String endereco, String cep) {
         this.name = name;
         Nascimento = nascimento;
         this.cpf = cpf;

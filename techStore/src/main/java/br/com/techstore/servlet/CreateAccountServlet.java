@@ -25,9 +25,28 @@ public class CreateAccountServlet extends HttpServlet {
         String userCep = servletRequest.getParameter("user-cep");
 
 
-            User user = new User(userName, senha1, userNascimento, userCpf,userEndereco, userEmail, userCep );
+
+
+
+
+
+
+        if (senha1.equals(senha2) && senha1.length() >= 8) {
+            User user = new User();
+            user.setName(userName);
+            user.setSenha(senha1);
+            user.setNascimento(userNascimento);
+            user.setCpf(userCpf);
+            user.setEmail(userEmail);
+            user.setEndereco(userEndereco);
+            user.setCep(userCep);
 
             new UserDao().createUser(user);
+
+            servletRequest.getRequestDispatcher("index.html").forward(servletRequest, resp);
+        } else {
+            System.out.println("Não foi possível realizar o cadastro de usuário, verifique se todos os campos estão preenchidos corretamente e as senhas são iguais");
+        }
 
         resp.sendRedirect("index.jsp");
 

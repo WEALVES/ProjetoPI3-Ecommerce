@@ -97,6 +97,7 @@ public class CreateProdutoServlet extends HttpServlet {
         String fileName = currentTime.toString().concat("-").concat(fileItem.getName().replace(" ", ""));
         String filePath = this.getServletContext().getRealPath("img").concat(File.separator).concat(fileName);
         fileItem.write(new File(filePath));
+        System.out.println("RESULTADO: " + fileName);
         return fileName;
     }
 }
