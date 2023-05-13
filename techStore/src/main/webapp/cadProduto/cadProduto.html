@@ -20,7 +20,7 @@
         </div>
 
     </div>
-    <form class="form" action="/create-produto" method="post">
+    <form class="form" action="/create-produto" method="post" enctype="multipart/form-data">
         <div class="loginBox">
             <input type="text" class="input" name="nome" id="nome" placeholder="Nome Do Produto">
             <input type="number" class="input" name="preco" id="preco" placeholder="Preço da Unidade">
@@ -29,7 +29,11 @@
             <input type="text" class="input" name="marca" id="marca" placeholder="Marca">
             <input type="text" class="input" name="categoria" id="categoria" placeholder="Categoria">
             <input type="text" class="input" name="descricao" id="descricao" placeholder="Descrição do produto">
-            <input type="file" class="input" placeholder="Imagem">
+<!--        <input type="file" class="input" placeholder="Imagem">-->
+            <div>
+                <label for="file">Choose file</label>
+                <input type="file" name="file" id="file">
+            </div>
             <button class="buttonLogin" type="submit">Adicionar Produto</button>
         </div>
     </form>

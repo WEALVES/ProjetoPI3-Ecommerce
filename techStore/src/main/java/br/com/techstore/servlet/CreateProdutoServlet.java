@@ -7,7 +7,7 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import javax.servlet.ServletException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,29 +24,79 @@ import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipar
 @WebServlet("/create-produto")
 public class CreateProdutoServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest servletRequest, HttpServletResponse servletResponse) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         Map<String, String> parameters = uploadImage(req);
 
-        String carImagePath = parameters.get("image");
-        String carName = parameters.get("car-name");
-
-        String nome = servletRequest.getParameter("nome");
-        String categoria = servletRequest.getParameter("categoria");
-        String fabricante = servletRequest.getParameter("fabricante");
-        String marca = servletRequest.getParameter("marca");
-        String preco = servletRequest.getParameter("preco");
-        String descricao = servletRequest.getParameter("descricao");
-        String quantidade = servletRequest.getParameter("quantidade");
-        String imagem = servletRequest.getParameter("imagem");
+        String nome = parameters.get("nome");
+        String categoria = parameters.get("categoria");
+        String fabricante = parameters.get("fabricante");
+        String marca = parameters.get("marca");
+        String preco = parameters.get("preco");
+        String descricao = parameters.get("descricao");
+        String quantidade = parameters.get("quantidade");
+        String imagePath = parameters.get("imagem");
 
 
-        Produto produto = new Produto(nome, categoria, fabricante, marca, preco, descricao, quantidade, imagem);
+        Produto produto = new Produto(nome, categoria, fabricante, marca, preco, descricao, quantidade, imagePath);
 
 
         new ProdutoDao().createProduto(produto);
 
-        servletResponse.sendRedirect("/find-all-produtos");
+        resp.sendRedirect("/find-all-produtos");
 
+    }
+
+    private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {
+
+        Map<String, String> requestParameters = new HashMap<>();
+
+        if (isMultipartContent(httpServletRequest)) {
+
+            try {
+
+                DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
+
+                List<FileItem> fileItems = new ServletFileUpload(diskFileItemFactory).parseRequest(httpServletRequest);
+
+                for (FileItem fileItem : fileItems) {
+
+                    checkFieldType(fileItem, requestParameters);
+
+                }
+
+            } catch (Exception ex) {
+
+                requestParameters.put("image", "img/default-car.jpg");
+
+            }
+
+        }
+
+        return requestParameters;
+
+    }
+
+    private void checkFieldType(FileItem item, Map requestParameters) throws Exception {
+
+        if (item.isFormField()) {
+
+            requestParameters.put(item.getFieldName(), item.getString());
+
+        } else {
+
+            String fileName = processUploadedFile(item);
+            requestParameters.put("image", "img/".concat(fileName));
+
+        }
+
+    }
+
+    private String processUploadedFile(FileItem fileItem) throws Exception {
+        Long currentTime = new Date().getTime();
+        String fileName = currentTime.toString().concat("-").concat(fileItem.getName().replace(" ", ""));
+        String filePath = this.getServletContext().getRealPath("img").concat(File.separator).concat(fileName);
+        fileItem.write(new File(filePath));
+        return fileName;
     }
 }
