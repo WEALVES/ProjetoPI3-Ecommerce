@@ -24,13 +24,6 @@ public class CreateAccountServlet extends HttpServlet {
         String userEmail = servletRequest.getParameter("user-email");
         String userCep = servletRequest.getParameter("user-cep");
 
-
-
-
-
-
-
-
         if (senha1.equals(senha2) && senha1.length() >= 8) {
             User user = new User();
             user.setName(userName);
