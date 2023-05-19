@@ -1,0 +1,3 @@
+br\com\techStore\servlet\CreateAccountServlet.class
+br\com\techStore\dao\UserDao.class
+br\com\techStore\model\User.class
