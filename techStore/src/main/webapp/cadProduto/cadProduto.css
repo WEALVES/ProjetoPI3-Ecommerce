@@ -17,6 +17,17 @@
     
 }
 
+.header h1 {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgb(150, 91, 245);
+    height: 50px;
+}
+
 .home{
     height: 30px;
     width: 30px;
@@ -28,6 +39,9 @@
     transform: scale(1.05);
 }
 
+::-webkit-input-placeholder {
+    color: rgb(150, 91, 245);
+}
 
 
 .loginBox{
@@ -52,8 +66,9 @@
     font-size: 18px;
     border-radius: 12px;
     border: none;
-    margin: auto;
-    text-align: center;   
+    margin: 0;
+    padding: 0 15px;
+    text-align: left; 
     flex: 1;
 }
 
@@ -73,4 +88,50 @@
 }
 .buttonLogin:hover{
     transform: scale(1.02);
+}
+
+select {
+    background-color: rgb(41, 41, 41);
+    border: none;
+    color: rgb(150, 91, 245);
+    width: 400px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: 18px;
+    padding: 0 15px;
+    text-align: left;
+    margin: 0;
+}
+
+.insert-img {
+    background-color: rgb(41, 41, 41);
+    display: flex;
+    height: min-content;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.insert-img label {
+    padding: 15px 50px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(150, 91, 245);
+}
+
+
+input[type="file" i] {
+    background-color: black;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+input[type=number] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+
 }

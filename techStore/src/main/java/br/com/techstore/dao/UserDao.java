@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class UserDao {
-    public void createUser(User user) {
+    public boolean createUser(User user) {
         String SQL = "INSERT INTO USUARIO (NAME, DATA_NASCIMENTO, CPF, EMAIL, SENHA, ENDERECO, CEP) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try {
@@ -32,9 +32,12 @@ public class UserDao {
             preparedStatement.execute();
             connection.close();
             System.out.println("Success in connection.");
+            return true;
 
         } catch (Exception e) {
             System.out.println("fail in connection.");
+            System.out.println(e.getMessage());
+            return false;
         }
     }
 

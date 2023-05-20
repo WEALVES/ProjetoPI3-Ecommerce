@@ -8,6 +8,7 @@ import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,26 +25,39 @@ import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipar
 @WebServlet("/create-produto")
 public class CreateProdutoServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
         Map<String, String> parameters = uploadImage(req);
 
         String nome = parameters.get("nome");
         String categoria = parameters.get("categoria");
-        String fabricante = parameters.get("fabricante");
+        categoria = "placa mãe";
         String marca = parameters.get("marca");
-        String preco = parameters.get("preco");
+        Double preco = Double.valueOf(parameters.get("preco"));
         String descricao = parameters.get("descricao");
-        String quantidade = parameters.get("quantidade");
-        String imagePath = parameters.get("imagem");
+        int quantidade = Integer.parseInt(parameters.get("quantidade"));
+        String imagePath = parameters.get("image");
+        System.out.println(imagePath);
 
 
-        Produto produto = new Produto(nome, categoria, fabricante, marca, preco, descricao, quantidade, imagePath);
+        Produto produto = new Produto(nome, categoria, marca, preco, descricao, quantidade, imagePath);
 
 
-        new ProdutoDao().createProduto(produto);
+        boolean isSuccessOnUpload = new ProdutoDao().createProduto(produto);
 
-        resp.sendRedirect("/find-all-produtos");
+        if(isSuccessOnUpload) {
+
+            resp.sendRedirect("/find-all-produtos");
+
+        } else {
+
+            req.setAttribute("message", "fail on upload image");
+
+            req.getRequestDispatcher("/cadProduto/cadProduto.jsp").forward(req, resp);
+
+        }
+
+
 
     }
 
@@ -66,8 +80,9 @@ public class CreateProdutoServlet extends HttpServlet {
                 }
 
             } catch (Exception ex) {
+                System.out.println("erro no create produto servlet");
 
-                requestParameters.put("image", "img/default-car.jpg");
+                requestParameters.put("image", "assets/imgProduct/default-car.jpg");
 
             }
 
@@ -86,7 +101,7 @@ public class CreateProdutoServlet extends HttpServlet {
         } else {
 
             String fileName = processUploadedFile(item);
-            requestParameters.put("image", "img/".concat(fileName));
+            requestParameters.put("image", "assets/imgProduct".concat(fileName));
 
         }
 
@@ -95,7 +110,7 @@ public class CreateProdutoServlet extends HttpServlet {
     private String processUploadedFile(FileItem fileItem) throws Exception {
         Long currentTime = new Date().getTime();
         String fileName = currentTime.toString().concat("-").concat(fileItem.getName().replace(" ", ""));
-        String filePath = this.getServletContext().getRealPath("img").concat(File.separator).concat(fileName);
+        String filePath = this.getServletContext().getRealPath("assets/imgProduct").concat(File.separator).concat(fileName);
         fileItem.write(new File(filePath));
         System.out.println("RESULTADO: " + fileName);
         return fileName;

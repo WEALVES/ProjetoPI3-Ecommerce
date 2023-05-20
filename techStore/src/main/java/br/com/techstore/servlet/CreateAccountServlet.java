@@ -34,14 +34,23 @@ public class CreateAccountServlet extends HttpServlet {
             user.setEndereco(userEndereco);
             user.setCep(userCep);
 
-            new UserDao().createUser(user);
 
-            servletRequest.getRequestDispatcher("index.html").forward(servletRequest, resp);
+            boolean retorno = new UserDao().createUser(user);
+
+            if(retorno) {
+                servletRequest.getRequestDispatcher("/index.jsp").forward(servletRequest, resp);
+               // resp.sendRedirect("/login");
+            }
+            else {
+                servletRequest.getRequestDispatcher("/cadastro/cadastro.jsp").forward(servletRequest, resp);
+            }
+
         } else {
             System.out.println("Não foi possível realizar o cadastro de usuário, verifique se todos os campos estão preenchidos corretamente e as senhas são iguais");
+            servletRequest.getRequestDispatcher("/cadastro/cadastro.jsp").forward(servletRequest, resp);
         }
 
-        resp.sendRedirect("index.jsp");
+        // resp.sendRedirect("/login");
 
     }
 

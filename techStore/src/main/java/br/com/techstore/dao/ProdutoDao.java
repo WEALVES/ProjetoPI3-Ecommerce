@@ -15,8 +15,9 @@ import java.util.List;
 
 public class ProdutoDao {
 
-    public void createProduto(Produto produto) {
-        String SQL = "INSERT INTO PRODUTO (NOME, CATEGORIA, FABRICANTE, MARCA, PRECO, DESCRICAO, QUANTIDADE, IMAGEM) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+    public boolean createProduto(Produto produto) {
+
+        String SQL = "INSERT INTO PRODUTO (NOME_PRODUTO, CATEGORIA, MARCA, PRECO, DESCRICAO, QTD, IMAGE) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try {
             Connection connection = DriverManager.getConnection(
@@ -28,18 +29,25 @@ public class ProdutoDao {
 
             preparedStatement.setString(1, produto.getNome());
             preparedStatement.setString(2, produto.getCategoria());
-            preparedStatement.setString(3, produto.getFabricante());
-            preparedStatement.setString(4, produto.getMarca());
-            preparedStatement.setString(5, produto.getPreco());
-            preparedStatement.setString(6, produto.getDescricao());
-            preparedStatement.setString(7, produto.getQuatidade());
-            preparedStatement.setString(8, produto.getImagem());
+            preparedStatement.setString(3, produto.getMarca());
+            preparedStatement.setDouble(4, produto.getPreco());
+            preparedStatement.setString(5, produto.getDescricao());
+            preparedStatement.setInt(6, produto.getQuatidade());
+            preparedStatement.setString(7, produto.getImagem());
             preparedStatement.execute();
             connection.close();
 
             System.out.println("Sucess in connection, teste cadastro");
+
+            return true;
+
         } catch (Exception e) {
+
             System.out.println("Fail in connection");
+            System.out.println(e.getMessage());
+
+            return false;
+
         }
 
 
@@ -64,14 +72,13 @@ public class ProdutoDao {
 
                 String nome = resultSet.getString("nome");
                 String categoria = resultSet.getString("categoria");
-                String fabricante = resultSet.getString("fabricante");
                 String marca = resultSet.getString("marca");
-                String preco = resultSet.getString("preco");
+                Double preco = resultSet.getDouble("preco");
                 String descricao = resultSet.getString("descricao");
-                String quantidade = resultSet.getString("quantidade");
+                int quantidade = resultSet.getInt("quantidade");
                 String imagem = resultSet.getString("imagem");
 
-                Produto produto = new Produto(nome, categoria, fabricante, marca, preco, descricao, quantidade, imagem);
+                Produto produto = new Produto(nome, categoria, marca, preco, descricao, quantidade, imagem);
 
                 produtos.add(produto);
 
@@ -86,9 +93,11 @@ public class ProdutoDao {
         } catch (Exception e) {
 
             System.out.println("fail in database connection, de produto");
+            System.out.println(e.getMessage());
 
             return Collections.emptyList();
 
         }
     }
+
 }

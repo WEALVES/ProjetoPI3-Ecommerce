@@ -60,6 +60,13 @@ form {
     flex-direction: column;
 }
 
+.display-form {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 ::-webkit-input-placeholder {
     color: rgb(150, 91, 245);
 }
@@ -67,13 +74,14 @@ form {
 .row-input {
     display: flex;
     flex-direction: row;
+    height: min-content;
     justify-content: space-between;
 }
 
 .input{
-    width: 3600px;
+    width: 360px;
     height: 40px;
-    margin: 30px 0;
+    margin: 0px 0;
     padding: 0 25px;
     background-color: rgb(41, 41, 41);
     font-size: 18px;

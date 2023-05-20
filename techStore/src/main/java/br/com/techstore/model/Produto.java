@@ -3,17 +3,15 @@ package br.com.techstore.model;
 public class Produto {
     private String nome;
     private String categoria;
-    private String fabricante;
     private String marca;
-    private String preco;
+    private Double preco;
     private String descricao;
-    private String quatidade;
+    private int quatidade;
     private String imagem;
 
-    public Produto(String nome, String categoria, String fabricante, String marca, String preco, String descricao, String quatidade, String imagem) {
+    public Produto(String nome, String categoria, String marca, Double preco, String descricao, int quatidade, String imagem) {
         this.nome = nome;
         this.categoria = categoria;
-        this.fabricante = fabricante;
         this.marca = marca;
         this.preco = preco;
         this.descricao = descricao;
@@ -37,14 +35,6 @@ public class Produto {
         this.categoria = categoria;
     }
 
-    public String getFabricante() {
-        return fabricante;
-    }
-
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
-    }
-
     public String getMarca() {
         return marca;
     }
@@ -53,11 +43,11 @@ public class Produto {
         this.marca = marca;
     }
 
-    public String getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(String preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
@@ -69,11 +59,11 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public String getQuatidade() {
+    public int getQuatidade() {
         return quatidade;
     }
 
-    public void setQuatidade(String quatidade) {
+    public void setQuatidade(int quatidade) {
         this.quatidade = quatidade;
     }
 
