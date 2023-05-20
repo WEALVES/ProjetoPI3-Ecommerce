@@ -30,7 +30,7 @@
             <input type="number" class="input" name="quantidade" id="quantidade" placeholder="Quantidade">
             <input type="text" class="input" name="fabricante" id="fabricante" placeholder="Fabricante">
             <input type="text" class="input" name="marca" id="marca" placeholder="Marca">
-            <select class="Categoria">
+            <select class="Categoria" id="categoria">
                 <option value="null">Selecionar</option>
                 <option value="placa-mae">Placa mãe</option>
                 <option value="processador">Processador</option>

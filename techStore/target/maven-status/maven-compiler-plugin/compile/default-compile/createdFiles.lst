@@ -1,8 +1,0 @@
-br\com\techstore\servlet\ListProdutoServlet.class
-br\com\techstore\servlet\CreateAccountServlet.class
-br\com\techstore\dao\ProdutoDao.class
-br\com\techstore\dao\UserDao.class
-br\com\techstore\servlet\CreateProdutoServlet.class
-br\com\techstore\model\Produto.class
-br\com\techstore\model\User.class
-br\com\techstore\servlet\ListUserServlet.class

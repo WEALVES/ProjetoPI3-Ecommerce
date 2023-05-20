@@ -13,10 +13,10 @@
 
   <div class="header">
     <div class="filter" >
-      <img src="./assets/option.png" alt="filtro" onclick="clickMenu()">
+      <img src="/assets/option.png" alt="filtro" onclick="clickMenu()">
     </div>
     <div class="Logo">
-      <img src="./LOGO TECHSTORE/LOGOpng.png" alt="logo">
+      <img src="/assets/logo-techstore/logo.png" alt="logo">
     </div>
     <div class="search_Bar">
       <input type="search" class="search" placeholder="Buscar">
@@ -26,7 +26,7 @@
       <a href="./cadProduto/cadProduto.jsp"><img src="./assets/pacote.png" alt="Cadastrar Produtos"></a>
     </div>
     <div class="profile">
-      <a href="./login/login.html"><img src="./assets/perfil.png" alt="perfil" ></a>
+      <a href="./login/login.jsp"><img src="./assets/perfil.png" alt="perfil" ></a>
     </div>
   </div>
 </div>

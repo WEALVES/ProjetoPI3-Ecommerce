@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="./perfil.css">
-    <link rel="stylesheet" href="../style.css">
+    <%@ page contentType="text/html; charset=UTF-8" %>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Perfil</title>
+        <link rel="stylesheet" href="./perfil.css">
+        <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <div class="header_Border">
-
         <div class="header">
-            
-                <div class="Logo">
-                    <a href="../index.html">
+            <div class="Logo">
+                <a href="../index.jsp">
                     <img src="../LOGO TECHSTORE/LOGOpng.png" alt="logo">
-                    </a>
-                </div>
-            
-                        
-                    <div class="search_Bar">
-                        <input type="search" class="search" placeholder="Buscar">
-                        <img src="../assets/lupa.png" class="btnBusca">
-                    </div>
+                </a>
+            </div>
+
+
+            <div class="search_Bar">
+                <input type="search" class="search" placeholder="Buscar">
+                <img src="../assets/lupa.png" class="btnBusca">
+            </div>
         </div>
     </div>
 
@@ -40,12 +41,12 @@
                     Seu Nome
                 </p>
             </div>
-                <button class="tipoDados" id="perfil" onclick="mostrarPerfil()">
-                    
-                    <img src="../assets/perfil.png">
-                    <p>Perfil</p>
-                    
-                </button>
+            <button class="tipoDados" id="perfil" onclick="mostrarPerfil()">
+
+                <img src="../assets/perfil.png">
+                <p>Perfil</p>
+
+            </button>
             <button class="tipoDados" id="historico" onclick="mostrarHist()">
                 <img src="../assets/listaPedidos.png">
                 <p>Pedidos</p>
@@ -98,6 +99,7 @@
 
 
     <script src="./script.js" defer> </script>
-    
+
 </body>
+
 </html>

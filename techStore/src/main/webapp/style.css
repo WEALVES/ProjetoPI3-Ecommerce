@@ -11,7 +11,26 @@
     roxo escuro rgb(39,38,61);
     roxo perola rgb(189,188,221);
     
+
+    -roxo #695bf5
+    -roxo meio apagado #8180c1
+    -roxo forte #682baf
+    -roxo escuro #27263d
+    -roxo perola #bdbcdd
+
 */
+
+:root {
+    --bg-cinza: #8d8d8d;
+    --color-1: #313030;
+    --color-2: #292929;
+    --color-3: #3b3b3b;
+    --roxo: #695BF5;
+    --roxo-claro: #8180C1;
+    --roxo-forte: #682BAF;
+    --roxo-escuro: #27263D;
+    --roxo-perola: #BDBCDD;
+}
 
 
 /*Reset do site*/
@@ -25,7 +44,7 @@
 
 body{
     background-color: rgb(141, 141, 141);
-    background-image: url("./LOGO\ TECHSTORE/Prancheta 6.png");
+    background-image: url(/assets/logo-techstore/background-roxo.png);
     backdrop-filter: blur(5px);
 }
 
