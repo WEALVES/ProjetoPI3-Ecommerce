@@ -150,6 +150,17 @@ div.header{
     transform: scale(1.05);
 }
 
+.carrinho{
+    height: 45px;
+    width: 45px;
+    margin: 10px;
+    transition: trasform .1s;
+}
+
+.carrinho:hover{
+    transform: scale(1.05);
+}
+
 /*FILTRO*/
 .filter{
     height: 30px;
@@ -169,7 +180,7 @@ div.header{
     height: 100%;
     width: 300px;
     background-color: rgb(41, 41, 41);
-    
+
 }
 
 

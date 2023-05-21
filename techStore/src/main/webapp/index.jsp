@@ -22,6 +22,9 @@
       <input type="search" class="search" placeholder="Buscar">
       <img src="./assets/lupa.png" class="btnBusca">
     </div>
+    <div class="carrinho">
+          <a href="./carrinho/carrinho.jsp"><img src="./assets/carrinho.png" alt="Carrinho Compras"></a>
+        </div>
     <div class="cadProduto">
       <a href="./cadProduto/cadProduto.jsp"><img src="./assets/pacote.png" alt="Cadastrar Produtos"></a>
     </div>
