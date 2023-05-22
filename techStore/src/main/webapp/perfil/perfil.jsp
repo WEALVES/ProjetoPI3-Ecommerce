@@ -92,8 +92,21 @@
             </div>
 
             <div class="hb" id="hb">
-                <h1>HISTORICO</h1>
+                <h1>HISTÓRICO</h1>
+                <label id="nome">
+                    <img src="../assets/pc foda.jpg">
+                    <p class="nome">Computador Eletrolux</p>
+                    <p class="nome">Comprado em: 20/09/2022</p>
+                </label>
+                <div class="linha"></div>
+                <label id="nome">
+                    <img src="../assets/mouse foda.png">
+                    <p class="nome">Mouse Polishop</p>
+                    <p class="nome">Comprado em: 20/09/2022</p>
+                </label>
+                <div class="linha"></div>
             </div>
+        </div>
         </div>
     </section>
 
