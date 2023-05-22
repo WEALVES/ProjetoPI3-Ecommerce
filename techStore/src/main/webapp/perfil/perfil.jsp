@@ -15,15 +15,15 @@
     <div class="header_Border">
         <div class="header">
             <div class="Logo">
-                <a href="../index.jsp">
-                    <img src="../LOGO TECHSTORE/LOGOpng.png" alt="logo">
+                <a href="/index.jsp">
+                    <img src="/assets/logo-techstore/logo.png" alt="logo">
                 </a>
             </div>
 
 
             <div class="search_Bar">
                 <input type="search" class="search" placeholder="Buscar">
-                <img src="../assets/lupa.png" class="btnBusca">
+                <img src="/assets/lupa.png" class="btnBusca">
             </div>
         </div>
     </div>
@@ -34,7 +34,7 @@
         <div class="menuPerfil">
 
             <div class="fotoPerfil">
-                <img src="../assets/fotoUsuario.png">
+                <img src="/assets/fotoUsuario.png">
             </div>
             <div class="nomePerfil">
                 <p>
@@ -43,12 +43,12 @@
             </div>
             <button class="tipoDados" id="perfil" onclick="mostrarPerfil()">
 
-                <img src="../assets/perfil.png">
+                <img src="/assets/perfil.png">
                 <p>Perfil</p>
 
             </button>
             <button class="tipoDados" id="historico" onclick="mostrarHist()">
-                <img src="../assets/listaPedidos.png">
+                <img src="/assets/listaPedidos.png">
                 <p>Pedidos</p>
             </button>
         </div>
@@ -63,27 +63,27 @@
 
 
                 <label id="nome">Nome
-                    <p class="nome">Jose anuario de souza silva</p>
+                    <p class="nome">${sessionScope.loggedUser}</p>
                 </label>
                 <div class="linha"></div>
 
                 <label id="nome">CPF
-                    <p class="nome">123.456.789-12</p>
+                    <p class="nome">${sessionScope.cpf}</p>
                 </label>
                 <div class="linha"></div>
 
                 <label id="nome">Data de Nascimento
-                    <p class="nome">01/01/2001</p>
+                    <p class="nome">${sessionScope.nascimento}</p>
                 </label>
                 <div class="linha"></div>
 
                 <label id="nome">Endereço
-                    <p class="nome">Rua Aqui Mesmo, 69</p>
+                    <p class="nome">${sessionScope.endereco}</p>
                 </label>
                 <div class="linha"></div>
 
                 <label id="nome">CEP
-                    <p class="nome">64646-646</p>
+                    <p class="nome">${sessionScope.cep}</p>
                 </label>
                 <div class="linha"></div>
 

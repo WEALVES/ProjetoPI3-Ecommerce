@@ -21,6 +21,7 @@
 */
 
 :root {
+    font-family: arial;
     --bg-cinza: #8d8d8d;
     --color-1: #313030;
     --color-2: #292929;
@@ -239,4 +240,33 @@ div.header{
 
 .input{
     color: white;
+}
+
+a {
+    color: var(--roxo);
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+    width: min-content;
+    height: min-content;
+    font-size: 11px;
+}
+
+.infos {
+    justify-content: space-between;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.infos span {
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFF;
+    text-transform: uppercase;
+    width: auto;
+    height: auto;
+    word-break: keep-all;
 }
