@@ -104,12 +104,16 @@ select {
 }
 
 .insert-img {
-    background-color: rgb(41, 41, 41);
+    background-color: transparent;
     display: flex;
     height: min-content;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+}
+
+.insert-img input {
+    color: #fff;
 }
 
 .insert-img label {
@@ -122,8 +126,9 @@ select {
 }
 
 
+
 input[type="file" i] {
-    background-color: black;
+    background-color: var(--bg-cinza);
 }
 
 input[type=number]::-webkit-inner-spin-button {

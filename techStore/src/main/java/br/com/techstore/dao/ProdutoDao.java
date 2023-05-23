@@ -69,16 +69,16 @@ public class ProdutoDao {
             List<Produto> produtos = new ArrayList<>();
 
             while (resultSet.next()) {
-
-                String nome = resultSet.getString("nome");
+                int id = resultSet.getInt("id_produto");
+                String nome = resultSet.getString("nome_produto");
                 String categoria = resultSet.getString("categoria");
                 String marca = resultSet.getString("marca");
                 Double preco = resultSet.getDouble("preco");
                 String descricao = resultSet.getString("descricao");
-                int quantidade = resultSet.getInt("quantidade");
-                String imagem = resultSet.getString("imagem");
+                int quantidade = resultSet.getInt("qtd");
+                String imagem = resultSet.getString("image");
 
-                Produto produto = new Produto(nome, categoria, marca, preco, descricao, quantidade, imagem);
+                Produto produto = new Produto(id, nome, categoria, marca, preco, descricao, quantidade, imagem);
 
                 produtos.add(produto);
 

@@ -1,6 +1,7 @@
 package br.com.techstore.model;
 
 public class Produto {
+    private int id;
     private String nome;
     private String categoria;
     private String marca;
@@ -8,6 +9,17 @@ public class Produto {
     private String descricao;
     private int quatidade;
     private String imagem;
+
+    public Produto(int id, String nome, String categoria, String marca, Double preco, String descricao, int quatidade, String imagem) {
+        this.id = id;
+        this.nome = nome;
+        this.categoria = categoria;
+        this.marca = marca;
+        this.preco = preco;
+        this.descricao = descricao;
+        this.quatidade = quatidade;
+        this.imagem = imagem;
+    }
 
     public Produto(String nome, String categoria, String marca, Double preco, String descricao, int quatidade, String imagem) {
         this.nome = nome;
@@ -73,5 +85,12 @@ public class Produto {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
     }
 }

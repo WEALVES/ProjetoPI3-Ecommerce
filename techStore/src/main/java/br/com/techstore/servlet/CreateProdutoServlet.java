@@ -31,7 +31,7 @@ public class CreateProdutoServlet extends HttpServlet {
 
         String nome = parameters.get("nome");
         String categoria = parameters.get("categoria");
-        categoria = "placa mãe";
+        System.out.println("categoria" + categoria);
         String marca = parameters.get("marca");
         Double preco = Double.valueOf(parameters.get("preco"));
         String descricao = parameters.get("descricao");
@@ -101,7 +101,7 @@ public class CreateProdutoServlet extends HttpServlet {
         } else {
 
             String fileName = processUploadedFile(item);
-            requestParameters.put("image", "assets/imgProduct".concat(fileName));
+            requestParameters.put("image", "assets/imgProduct/".concat(fileName));
 
         }
 

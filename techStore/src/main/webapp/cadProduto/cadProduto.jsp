@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <%@ page contentType="text/html; charset=UTF-8" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CADASTRO</title>
@@ -30,8 +32,8 @@
             <input type="number" class="input" name="quantidade" id="quantidade" placeholder="Quantidade">
             <input type="text" class="input" name="fabricante" id="fabricante" placeholder="Fabricante">
             <input type="text" class="input" name="marca" id="marca" placeholder="Marca">
-            <select class="Categoria" id="categoria">
-                <option value="null">Selecionar</option>
+            <select class="Categoria" id="categoria" name="categoria">
+                <option value="null">Não definido</option>
                 <option value="placa-mae">Placa mãe</option>
                 <option value="processador">Processador</option>
                 <option value="memoria-ram">Memória RAM</option>
@@ -43,7 +45,11 @@
             </select>
             <input type="text" class="input" name="descricao" id="descricao" placeholder="Descrição">
 
-            <input type="file" name="file" id="file">
+            <div class="insert-img">
+                <label for="file">Choose file</label>
+                <input type="file" name="file" id="file">
+            </div>
+
             <button class="buttonLogin" type="submit">Adicionar Produto</button>
         </div>
     </form>

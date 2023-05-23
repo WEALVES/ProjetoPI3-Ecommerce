@@ -3,11 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site</title>
-  <link rel="stylesheet" href="./style.css">
-  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+  <%@ page contentType="text/html; charset=UTF-8" %>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Site</title>
+      <link rel="stylesheet" href="./style.css">
+      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </head>
 
 <body>
@@ -58,9 +60,20 @@
 
   </div>
   <section class="main_Screen">
+    <c:forEach var="produto" items="${produtos}">
+      <div class="block" id="${produto.id}">
+        <div>
+          <a href="/pagProduto/pagProduto.jsp">
+            <img src="${produto.imagem}" alt="">
+
+            <p>${produto.nome}</p>
+          </a>
+        </div>
+      </div>
+    </c:forEach>
 
     <div class="block" id="produto-1">
-      <div><a href="./pagProduto/pagProduto.html"><img src="./assets/pc foda.jpg"
+      <div><a href="./pagProduto/pagProduto.jsp"><img src="./assets/pc foda.jpg"
             style="height: 200px; width: 200px;"></a>
         <c:forEach var="produto" items="${produtos}">
           <tr>
@@ -69,14 +82,6 @@
         </c:forEach>
       </div>
     </div>
-    <div class="block" id="produto-2">
-      <div><img src="./assets/mouse foda.png" style="height: 200px; width: 200px;"></div>
-    </div>
-    <div class="block" id="produto-3">
-      <div><img src="./assets/teclado foda.jpg" style="height: 200px; width: 200px;"></div>
-    </div>
-
-
   </section>
 
 

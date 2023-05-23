@@ -13,7 +13,7 @@
 
         <div class="header">
                     <div class="Logo">
-                        <a href="../index.html">
+                        <a href="/index.jsp">
                             <img src="../LOGO TECHSTORE/LOGOpng.png" alt="logo">
                         </a>
                     </div>
@@ -22,10 +22,10 @@
                         <img src="../assets/lupa.png" class="btnBusca">
                     </div>
                 <div class="cadProduto">
-                    <a href="../cadProduto/cadProduto.html"><img src="../assets/pacote.png" alt="Cadastrar Produtos"></a>
+                    <a href="/cadProduto/cadProduto.jsp"><img src="../assets/pacote.png" alt="Cadastrar Produtos"></a>
                 </div>
                 <div class="profile">
-                    <a href="../login/login.html"><img src="../assets/perfil.png" alt="perfil" ></a>
+                    <a href="/login/login.jsp"><img src="/assets/perfil.png" alt="perfil" ></a>
                 </div>
         </div>
     </div>
