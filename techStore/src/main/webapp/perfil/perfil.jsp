@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Perfil</title>
-        <link rel="stylesheet" href="./perfil.css">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="/perfil/perfil.css">
+        <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -51,6 +51,14 @@
                 <img src="/assets/listaPedidos.png">
                 <p>Pedidos</p>
             </button>
+
+            <a href="/perfil/excluirPerfil.jsp">
+                <div class="tipoDados" id="historico">
+                    <img src="/assets/trash.png">
+                    <p>Apagar conta</p>
+                    <input type="hidden" name="cpf-user" value="${sessionScope.cpf}">
+                </div>
+            </a>
         </div>
 
 
@@ -60,8 +68,6 @@
             <h1>Informações do usuario</h1>
 
             <div class="pb" id="pb">
-
-
                 <label id="nome">Nome
                     <p class="nome">${sessionScope.loggedUser}</p>
                 </label>
@@ -86,9 +92,6 @@
                     <p class="nome">${sessionScope.cep}</p>
                 </label>
                 <div class="linha"></div>
-
-
-
             </div>
 
             <div class="hb" id="hb">

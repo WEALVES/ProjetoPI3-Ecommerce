@@ -18,7 +18,7 @@
         <div class="header">
             <h1>Cadastrar produto</h1>
             <div class="Logo">
-                <a href="/index.jsp"><img src="http://localhost:8080/logo-techstore/LOGOpng.png" alt="logo"></a>
+                <a href="/find-all-produtos"><img src="http://localhost:8080/logo-techstore/LOGOpng.png" alt="logo"></a>
             </div>
         </div>
     </div>
@@ -33,15 +33,15 @@
             <input type="text" class="input" name="fabricante" id="fabricante" placeholder="Fabricante">
             <input type="text" class="input" name="marca" id="marca" placeholder="Marca">
             <select class="Categoria" id="categoria" name="categoria">
-                <option value="null">Não definido</option>
-                <option value="placa-mae">Placa mãe</option>
-                <option value="processador">Processador</option>
-                <option value="memoria-ram">Memória RAM</option>
-                <option value="armazenamento">Armazenamento interno</option>
-                <option value="fonte">Fonte de alimentção</option>
-                <option value="gabinete">Gabinete</option>
-                <option value="roteador">roteador</option>
-                <option value="periferico">Periférico</option>
+                <option value="Não selecionado">Não definido</option>
+                <option value="Placa Mãe">Placa mãe</option>
+                <option value="Processador">Processador</option>
+                <option value="Memoria Ram">Memória RAM</option>
+                <option value="Armazenamento">Armazenamento interno</option>
+                <option value="Fonte">Fonte de alimentção</option>
+                <option value="Gabinete">Gabinete</option>
+                <option value="Roteador">roteador</option>
+                <option value="Periférico">Periférico</option>
             </select>
             <input type="text" class="input" name="descricao" id="descricao" placeholder="Descrição">
 

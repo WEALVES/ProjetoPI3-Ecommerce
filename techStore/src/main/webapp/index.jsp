@@ -8,13 +8,13 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Site</title>
-      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="/style.css">
       <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </head>
 
 <body>
   <div class="header_Border">
-
+    <a href="/find-all-produtos">Carregar</a>
     <div class="header">
       <div class="filter">
         <img src="/assets/option.png" alt="filtro" onclick="clickMenu()">
@@ -61,32 +61,26 @@
   </div>
   <section class="main_Screen">
     <c:forEach var="produto" items="${produtos}">
-      <div class="block" id="${produto.id}">
-        <div>
-          <a href="/pagProduto/pagProduto.jsp">
+      <form action="/search-produto" method="get" class="produto">
+        <button type="submit" class="produto-button block">
+          <input type="hidden" name="id-produto" value="${produto.id}">
+          <p class="categoria-produto">${produto.categoria}</p>
+          <div class="content-img">
             <img src="${produto.imagem}" alt="">
-
-            <p>${produto.nome}</p>
-          </a>
-        </div>
-      </div>
+          </div>
+          <h3>${produto.nome}</h3>
+          <p class="preco">R$ ${produto.preco}</p>
+        </button>
+      </form>
     </c:forEach>
 
-    <div class="block" id="produto-1">
-      <div><a href="./pagProduto/pagProduto.jsp"><img src="./assets/pc foda.jpg"
-            style="height: 200px; width: 200px;"></a>
-        <c:forEach var="produto" items="${produtos}">
-          <tr>
-            ${produto.nome}
-          </tr>
-        </c:forEach>
-      </div>
-    </div>
+
   </section>
 
 
 
   <script>
+
     function clickMenu() {
       if (menuFilter.style.display == 'block') {
         menuFilter.style.display = 'none'

@@ -64,6 +64,8 @@ public class ProdutoDao {
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
+
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
             List<Produto> produtos = new ArrayList<>();
@@ -100,4 +102,48 @@ public class ProdutoDao {
         }
     }
 
+    public Produto findProduto(int pId) {
+
+        String SQL = "SELECT * FROM PRODUTO WHERE ID_PRODUTO LIKE ?";
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("Sucesso na busca do produto selecionado");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setInt(1, pId);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                int id = resultSet.getInt("id_produto");
+                String nome = resultSet.getString("nome_produto");
+                String categoria = resultSet.getString("categoria");
+                String marca = resultSet.getString("marca");
+                Double preco = resultSet.getDouble("preco");
+                String descricao = resultSet.getString("descricao");
+                int quantidade = resultSet.getInt("qtd");
+                String imagem = resultSet.getString("image");
+
+                Produto produto = new Produto(id, nome, categoria, marca, preco, descricao, quantidade, imagem);
+                return produto;
+            }
+            System.out.println("success in select * produto");
+            connection.close();
+
+
+
+
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection, de produto");
+            System.out.println(e.getMessage());
+
+            return null;
+        }
+        return null;
+    }
 }

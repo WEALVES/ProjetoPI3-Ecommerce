@@ -93,4 +93,18 @@ public class Produto {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Produto{" +
+            "id=" + id +
+            ", nome='" + nome + '\'' +
+            ", categoria='" + categoria + '\'' +
+            ", marca='" + marca + '\'' +
+            ", preco=" + preco +
+            ", descricao='" + descricao + '\'' +
+            ", quatidade=" + quatidade +
+            ", imagem='" + imagem + '\'' +
+            '}';
+    }
 }

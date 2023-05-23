@@ -133,4 +133,35 @@ public class UserDao {
             return user;
         }
     }
+
+
+    public boolean deleteUser(String cpf) {
+
+        String SQL = "DELETE FROM USUARIO WHERE CPF LIKE ?";
+        User user = new User();
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, cpf);
+
+            preparedStatement.execute();
+            System.out.println("success in select * usuario");
+
+            connection.close();
+
+            return true;
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+            System.out.println(e.getMessage());
+
+            return false;
+        }
+    }
 }

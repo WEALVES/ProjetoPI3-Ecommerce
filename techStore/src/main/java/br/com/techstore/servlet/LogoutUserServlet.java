@@ -15,7 +15,7 @@ public class LogoutUserServlet extends HttpServlet {
 
         req.getSession().invalidate();
 
-        resp.sendRedirect("index.jsp");
+        resp.sendRedirect("find-all-produtos");
 
         //req.getRequestDispatcher("login.jsp").forward(req, resp);
 

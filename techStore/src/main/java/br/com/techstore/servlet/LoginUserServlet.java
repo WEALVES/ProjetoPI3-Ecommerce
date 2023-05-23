@@ -30,7 +30,7 @@ public class LoginUserServlet extends HttpServlet {
             req.getSession().setAttribute("cpf", user.getCpf());
             req.getSession().setAttribute("endereco", user.getEndereco());
             req.getSession().setAttribute("email", user.getEmail());
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
+            req.getRequestDispatcher("/find-all-produtos").forward(req, resp);
         } else {
             System.out.println("Deu tudo errado");
             req.setAttribute("message", "Invalid credentials!");

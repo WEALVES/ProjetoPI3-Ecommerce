@@ -39,7 +39,7 @@ public class CreateAccountServlet extends HttpServlet {
 
             if(retorno) {
                 servletRequest.getRequestDispatcher("/index.jsp").forward(servletRequest, resp);
-               // resp.sendRedirect("/login");
+                // resp.sendRedirect("/login");
             }
             else {
                 servletRequest.getRequestDispatcher("/cadastro/cadastro.jsp").forward(servletRequest, resp);
