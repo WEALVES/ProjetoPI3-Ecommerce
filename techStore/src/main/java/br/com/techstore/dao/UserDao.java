@@ -138,18 +138,17 @@ public class UserDao {
     public boolean deleteUser(String cpf) {
 
         String SQL = "DELETE FROM USUARIO WHERE CPF LIKE ?";
-        User user = new User();
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("success in database connection");
+            System.out.println("success in database connection" + cpf);
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, cpf);
 
-            preparedStatement.execute();
+            preparedStatement.executeUpdate();
             System.out.println("success in select * usuario");
 
             connection.close();

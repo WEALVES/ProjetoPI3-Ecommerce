@@ -15,7 +15,8 @@ public class DeleteAccountServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    String cpfUser = String.valueOf(req.getAttribute("cpf-user"));
+    String cpfUser = req.getParameter("cpf");
+    System.out.println(cpfUser);
     boolean deletou = new UserDao().deleteUser(cpfUser);
 
     if(deletou) {

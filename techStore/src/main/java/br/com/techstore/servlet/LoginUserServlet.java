@@ -21,6 +21,7 @@ public class LoginUserServlet extends HttpServlet {
         User user = new UserDao().effectLogin(email);
 
         req.setAttribute("user", user);
+        req.setAttribute("cpf", user.getCpf());
         if(user.getSenha().equals(senha)) {
             System.out.println("Tudo certo, realizar sessão!");
             req.getSession().setAttribute("loggedUser", user.getName());

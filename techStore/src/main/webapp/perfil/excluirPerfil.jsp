@@ -65,9 +65,11 @@
         <button>
           Cancelar
         </button></a>
-        <a href="/delete-account">
-          <button type="">Excluir</button>
-        </a>
+
+        <form action="/delete-account" method="get" >
+            <input type="text" value="${sessionScope.cpf}" name="cpf"/>
+            <button type="submit">Excluir</button>
+        </form>
   </div>
 </body>
 
