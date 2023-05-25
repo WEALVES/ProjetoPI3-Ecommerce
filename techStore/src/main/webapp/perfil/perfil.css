@@ -208,4 +208,41 @@ div.header {
   height: 800px;
 }
 
+.infoPerfil .hb{
+  display: none;
+  flex-direction: column;
+  margin-bottom: 5px;    
+  margin: auto;
+  background-color: rgb(49, 48, 48);
+  margin-top: 70px;
+  width: 700px;
+  height: 800px;
+
+}
+  .infoPerfil .hb #nome{
+      font: 13pt Arial;
+      color: white;
+      width: 300px;
+      height: 50px;
+      margin-left: 30px;
+      margin-top: 30px;
+      display: inline-table;
+  }.infoPerfil .hb #nome img{
+      height: 90px;
+      width: 90px;
+      
+  }
+      .infoPerfil .hb .nome{
+          font: 18pt Arial;
+      }
+      
+      .infoPerfil .hb .linha{
+          height: 3px;
+          width: 630px;
+          margin-left: 30px;
+          margin-top: 5px;
+          background-color: rgba(255, 255, 255, 0.359);
+          border-radius: 3px;
+      }
+
 /*TELA PERFIL*/
