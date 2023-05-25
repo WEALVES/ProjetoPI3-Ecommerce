@@ -9,6 +9,7 @@
         <title>Perfil</title>
         <link rel="stylesheet" href="/perfil/perfil.css">
         <link rel="stylesheet" href="/style.css">
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </head>
 
 <body>
@@ -96,17 +97,10 @@
 
             <div class="hb" id="hb">
                 <h1>HISTÓRICO</h1>
-                <label id="nome">
-                    <img src="../assets/pc foda.jpg">
-                    <p class="nome">Computador Eletrolux</p>
-                    <p class="nome">Comprado em: 20/09/2022</p>
-                </label>
-                <div class="linha"></div>
-                <label id="nome">
-                    <img src="../assets/mouse foda.png">
-                    <p class="nome">Mouse Polishop</p>
-                    <p class="nome">Comprado em: 20/09/2022</p>
-                </label>
+                <div class="pedido">
+                    <c:forEach var="produto" items="${produtos}">
+                    </c:forEach>
+                </div>
                 <div class="linha"></div>
             </div>
         </div>
@@ -114,7 +108,7 @@
     </section>
 
 
-    <script src="./script.js" defer> </script>
+    <script src="/perfil/script.js" defer> </script>
 
 </body>
 

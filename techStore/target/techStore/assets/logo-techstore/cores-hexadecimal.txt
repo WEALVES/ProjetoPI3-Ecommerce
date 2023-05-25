@@ -1,0 +1,7 @@
+CORES EM HEXA
+
+    -roxo #695bf5
+    -roxo meio apagado #8180c1
+    -roxo forte #682baf
+    -roxo escuro #27263d
+    -roxo perola #bdbcdd

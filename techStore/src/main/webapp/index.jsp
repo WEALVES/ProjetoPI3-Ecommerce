@@ -40,7 +40,12 @@
           <a href="/logout">Sair</a>
         </div>
         <div class="profile">
-          <a href="./perfil/perfil.jsp"><img src="./assets/perfil.png" alt="perfil"></a>
+          <form action="/perfil" method="get">
+            <button style="width: 50px; height: 50px;" type="submit">
+              <input type="hidden" name="id-cliente" value="${sessionScope.id}">
+              <img src="./assets/perfil.png" alt="perfil">
+            </button>
+          </form>
         </div>
       </c:if>
 

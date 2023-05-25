@@ -67,7 +67,7 @@
         </button></a>
 
         <form action="/delete-account" method="get" >
-            <input type="text" value="${sessionScope.cpf}" name="cpf"/>
+            <input type="hidden" value="${sessionScope.cpf}" name="cpf"/>
             <button type="submit">Excluir</button>
         </form>
   </div>
