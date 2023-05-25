@@ -1,8 +1,9 @@
 package br.com.techstore.model;
 
 public class User {
+    private int id;
     private String name;
-    private String Nascimento;
+    private String nascimento;
     private String cpf;
     private String email;
     private String senha;
@@ -15,12 +16,31 @@ public class User {
 
     public User(String name, String nascimento, String cpf, String email, String senha, String endereco, String cep) {
         this.name = name;
-        Nascimento = nascimento;
+        this.nascimento = nascimento;
         this.cpf = cpf;
         this.email = email;
         this.senha = senha;
         this.endereco = endereco;
         this.cep = cep;
+    }
+
+    public User(int id, String name, String nascimento, String cpf, String email, String senha, String endereco, String cep) {
+        this.id = id;
+        this.name = name;
+        this.nascimento = nascimento;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.cep = cep;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -32,11 +52,11 @@ public class User {
     }
 
     public String getNascimento() {
-        return Nascimento;
+        return nascimento;
     }
 
     public void setNascimento(String nascimento) {
-        Nascimento = nascimento;
+        nascimento = nascimento;
     }
 
     public String getCpf() {
@@ -82,8 +102,9 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", Nascimento='" + Nascimento + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", nascimento='" + nascimento + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +

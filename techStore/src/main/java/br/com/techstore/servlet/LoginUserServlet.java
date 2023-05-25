@@ -24,6 +24,7 @@ public class LoginUserServlet extends HttpServlet {
         req.setAttribute("cpf", user.getCpf());
         if(user.getSenha().equals(senha)) {
             System.out.println("Tudo certo, realizar sessão!");
+            req.getSession().setAttribute("id", user.getId());
             req.getSession().setAttribute("loggedUser", user.getName());
             req.getSession().setAttribute("endereco", user.getEndereco());
             req.getSession().setAttribute("nascimento", user.getNascimento());

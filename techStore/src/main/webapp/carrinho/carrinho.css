@@ -26,7 +26,7 @@ body{
 }
 
 .header_Border{
-    background-color: rgb(41, 41, 41);
+    background-color: #292929;
     width: 100%;
     height: 100px;
 }
@@ -43,19 +43,22 @@ body{
 .Logo:hover{
     transform: scale(1.05);
 }
-.table{
-    margin-top: 30px;
-}
-#fundoTabela{
- background-color: rgb(41, 41, 41);
 
+#fundoTabela{
+    border-radius: 30px;
+ background-color: rgb(41, 41, 41);
+ padding: 20px;
 }
 
 #fundoResumo{
+    border-radius: 30px;
 background-color: rgb(59, 59, 59);
 color: white;
-justify-content: space-around;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
 text-align: left;
+padding: 20px;
 }
 
 .frete{
@@ -75,4 +78,15 @@ color: white;
 }
 .justify{
 word-spacing: 7em;
+}
+
+
+.area-pagamento {
+    background-color: #292929;
+    margin-left: 20px;
+    color: #fff;
+    width: 80%;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 30px auto;
 }

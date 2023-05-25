@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <%@ page contentType="text/html; charset=UTF-8" %>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Produto</title>
-        <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="/pageProduto/pagProduto.css">
         <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Produto</title>
+            <link rel="stylesheet" href="/style.css">
+            <link rel="stylesheet" href="/pageProduto/pagProduto.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         <div class="header">
             <div class="Logo">
                 <a href="/find-all-produtos">
-                <img src="/assets/logo-techstore/logo.png" alt="logo">
+                    <img src="/assets/logo-techstore/logo.png" alt="logo">
                 </a>
             </div>
             <div class="search_Bar">
@@ -65,9 +65,18 @@
             </h1>
             <p>R$ ${produto.preco}
             </p>
-            <button class="botaoCompra">
-                Comprar
-            </button>
+            <form action="/buy-product">
+                <input type="hidden" name="id-produto" value="${produto.id}">
+                <button class="botaoCompra">
+                    Comprar
+                </button>
+
+                <input style="height: auto;" type="number" name="quantidade-selecionada" value="1"> 
+                <span style="height: 40px; color: red;">
+                    ${messageQuantidade}
+                </span>
+            </form>
+            </a>
         </div>
         <div class="descricao">
             <p>

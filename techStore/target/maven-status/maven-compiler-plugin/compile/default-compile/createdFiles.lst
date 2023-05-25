@@ -1,0 +1,4 @@
+br/com/techstore/servlet/BuyProductServlet.class
+br/com/techstore/model/Venda.class
+br/com/techstore/servlet/ConfirmBuyServlet.class
+br/com/techstore/dao/VendaDao.class

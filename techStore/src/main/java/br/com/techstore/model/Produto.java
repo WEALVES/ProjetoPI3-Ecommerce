@@ -7,29 +7,31 @@ public class Produto {
     private String marca;
     private Double preco;
     private String descricao;
-    private int quatidade;
+    private int quantidade;
     private String imagem;
 
-    public Produto(int id, String nome, String categoria, String marca, Double preco, String descricao, int quatidade, String imagem) {
+    public Produto(int id, String nome, String categoria, String marca, Double preco, String descricao, int quantidade, String imagem) {
         this.id = id;
         this.nome = nome;
         this.categoria = categoria;
         this.marca = marca;
         this.preco = preco;
         this.descricao = descricao;
-        this.quatidade = quatidade;
+        this.quantidade = quantidade;
         this.imagem = imagem;
     }
 
-    public Produto(String nome, String categoria, String marca, Double preco, String descricao, int quatidade, String imagem) {
+    public Produto(String nome, String categoria, String marca, Double preco, String descricao, int quantidade, String imagem) {
         this.nome = nome;
         this.categoria = categoria;
         this.marca = marca;
         this.preco = preco;
         this.descricao = descricao;
-        this.quatidade = quatidade;
+        this.quantidade = quantidade;
         this.imagem = imagem;
     }
+
+
 
     public String getNome() {
         return nome;
@@ -71,12 +73,12 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public int getQuatidade() {
-        return quatidade;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setQuatidade(int quatidade) {
-        this.quatidade = quatidade;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     public String getImagem() {
@@ -103,7 +105,7 @@ public class Produto {
             ", marca='" + marca + '\'' +
             ", preco=" + preco +
             ", descricao='" + descricao + '\'' +
-            ", quatidade=" + quatidade +
+            ", quatidade=" + quantidade +
             ", imagem='" + imagem + '\'' +
             '}';
     }

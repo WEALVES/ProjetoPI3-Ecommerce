@@ -2,7 +2,6 @@ package br.com.techstore.dao;
 
 
 import br.com.techstore.model.Produto;
-import br.com.techstore.model.User;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,7 +31,7 @@ public class ProdutoDao {
             preparedStatement.setString(3, produto.getMarca());
             preparedStatement.setDouble(4, produto.getPreco());
             preparedStatement.setString(5, produto.getDescricao());
-            preparedStatement.setInt(6, produto.getQuatidade());
+            preparedStatement.setInt(6, produto.getQuantidade());
             preparedStatement.setString(7, produto.getImagem());
             preparedStatement.execute();
             connection.close();
@@ -49,9 +48,7 @@ public class ProdutoDao {
             return false;
 
         }
-
-
-        }
+    }
     public List<Produto> findAllProdutos() {
 
         String SQL = "SELECT * FROM PRODUTO";

@@ -109,6 +109,7 @@ public class UserDao {
 
             ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
+                int userId = resultSet.getInt("ID");
                 String userName = resultSet.getString("NAME");
                 String userSenha = resultSet.getString("SENHA");
                 String userNascimento = resultSet.getString("DATA_NASCIMENTO");
@@ -117,7 +118,7 @@ public class UserDao {
                 String userEmail = resultSet.getString("EMAIL");
                 String userCep = resultSet.getString("CEP");
 
-                user = new User(userName, userNascimento, userCpf, userEmail, userSenha, userEndereco, userCep);
+                user = new User(userId ,userName, userNascimento, userCpf, userEmail, userSenha, userEndereco, userCep);
             }
             System.out.println("success in select * usuario");
 
