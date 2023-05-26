@@ -15,11 +15,10 @@
     <div class="header_Border">
 
         <div class="header">
-            <div class="header">
+            <h1>Login</h1>
                 <div class="Logo">
                     <a href="/index.jsp"><img src="/assets/logo-techstore/logo.png" alt="logo"></a>
                 </div>
-            </div>
         </div>
     </div>
 

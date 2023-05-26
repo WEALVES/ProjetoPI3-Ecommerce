@@ -25,6 +25,17 @@
     transform: scale(1.05);
 }
 
+.header h1 {
+    position: absolute;
+    top: 24px;
+    left: 20px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: rgb(150, 91, 245);
+    height: 50px;
+}
+
 form {
     margin: auto
 }

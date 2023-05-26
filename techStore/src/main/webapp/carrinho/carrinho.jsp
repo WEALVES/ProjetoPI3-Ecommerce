@@ -16,14 +16,14 @@
 <body>
   <div class="header_Border">
     <div class="header">
+
+  <h3>Meu Carrinho</h3>
       <div class="Logo">
         <a href="/find-all-produtos"><img class="img" src="/assets/logo-techstore/logo.png" alt="logo"></a>
       </div>
     </div>
   </div>
 
-
-  <h3>Meu Carrinho</h3>
   <form action="/confirm-buy" method="get">
     <div class="container text-center">
 

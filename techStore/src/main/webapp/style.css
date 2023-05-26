@@ -168,6 +168,7 @@ div.header {
 }
 
 #menuFilter {
+  margin-top: 13px;
   display: none;
   flex-direction: column;
   margin-left: 0px;
