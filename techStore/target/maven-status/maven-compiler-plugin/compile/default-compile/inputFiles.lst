@@ -1,6 +1,7 @@
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\dao\VendaDao.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\model\Venda.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\servlet\BuyProductServlet.java
+C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\dao\AdminDao.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\servlet\DeleteAccountServlet.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\servlet\LoadProfileServlet.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\dao\UserDao.java
@@ -11,6 +12,7 @@ C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\mai
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\dao\ProdutoDao.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\servlet\SearchProdutoServlet.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\model\User.java
+C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\model\Admin.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\servlet\ListProdutoServlet.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\servlet\CreateProdutoServlet.java
 C:\Users\kinha\OneDrive\Documentos\GitHub\ProjetoPI3-Ecommerce\techStore\src\main\java\br\com\techstore\filter\AuthenticationFilter.java
