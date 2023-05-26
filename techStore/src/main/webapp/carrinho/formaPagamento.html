@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagamento</title>
+        <link rel="stylesheet" href="formaPagamento.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <div class="header_Border">
+            <div class="header">
+                <div class="Logo">
+                    <a href="/index.jsp"><img  class ="img" src="/assets/logo-techstore/logo.png" alt="logo"></a>
+                </div>
+        </div>
+    </div>
+
+
+
+<h3 class="titulo"><img class="img2" src="../assets/CarrinhoPedidos.png">Forma de Pagamento</h3>
+<div class="container text-center">
+
+  <div class="row  justify-content-evenly" >
+    <div class="col-6"id="fundoTabela">
+        <h5 class="texto"> pagar com Pix</h5>
+    <div><img src="../assets/pix.png"style="height: 100px; width: 100px;">
+    </div>
+
+    <div class="texto">
+
+
+   <div> Pague com Pix em qualquer dia e a qualquer hora! O pagamento é instantâneo, prático e pode ser feito em poucos segundos. É muito rápido e seguro :)</div>
+
+
+
+   <div> 1. abra o app do seu banco ou instituição financeira e entre no ambiente Pix </div>
+
+   <div> 2. escolha a opção pagar com qr code e escaneie o código ao lado </div>
+
+   <div> 3. confirme as informações e finalize a compra </div>
+
+        <div> código QR </div>
+
+    </div>
+
+        <img class="qr" src="../assets/Qrcode.png">
+
+    </div>
+        <div class="col-6"id="fundoTabela">
+            <h5 class="texto">Boleto</h5>
+            <div><img src="../assets/Boleto.png"style="height: 100px; width: 100px;">
+            </div>
+
+            <div class="texto">
+
+
+                <div> imprima o boleto e pague no banco</div>
+
+                <div> ou pague pela internet utilizando o código de barras do boleto </div>
+
+                <div> o prazo de validade do boleto é de 1 dia util </div>
+
+                <div> Aperte o botão abaixo e o boleto será enviado ao email vinculado a esta conta </div>
+
+            </div>
+
+
+            <button class="btn btn-danger" onclick="myFunction()">Gerar Boleto</button>
+
+            <p id="demo" class="texto"></p>
+
+            <script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Boleto Gerado com Sucesso!!!</br>Obrigado por comprar em nossa loja</br> Verifique Seus dados abaixo antes de finalizar sua compra";
+}
+</script>
+
+        </div>
+
+    <div class="col-12" id="fundoResumo">
+        <h5 class="texto">Resumo</h5>
+        <table class="table ">
+          <thead>
+            <tr>
+              <th scope="col">Rua</th>
+              <th scope="col">Bairro</th>
+                <th scope="col">CEP</th>
+                <th scope="col">Estado</th>
+              <th scope="col">Produtos</th>
+              <th scope="col">Preço Total</th>
+              <th scope="col">Entrega prevista</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>Rua Santo Amaro, 519</td>
+              <td>Santo amaro</td>
+              <td>0493552006</td>
+                <td>SP- São Paulo</td>
+                <td>1 Produto</td>
+                <td>R$ 515</td>
+                <td>26/06/2023<td>
+            </tr>
+
+          </tbody>
+        </table>
+        <a href="./carrinho.jsp"><button type="button" id="buttonVoltar" class="btn btn-primary">Voltar</button></a>
+        <a href="../index.jsp"><button type="button" id="buttonFinalizar" class="btn btn-danger">Finalizar Compra</button></a>
+        </div>
+    </script>
+
+  </div>
+</div>
+</body>
+
+</html>

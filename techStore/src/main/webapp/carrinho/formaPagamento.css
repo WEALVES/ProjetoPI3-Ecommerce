@@ -15,7 +15,7 @@ body{
 
 /*Configuração cabeçalho*/
 
-div.header{
+.header{
     background-color: rgb(59, 59, 59);
     width: 100%;
     height: 100px;
@@ -28,39 +28,31 @@ div.header{
 .header_Border{
     background-color: rgb(41, 41, 41);
     width: 100%;
-    height: 105px;
+    height: 100px;
+}
+
+.img{
+ transform: scale(0.12);
 }
 
 .Logo{
-    width: 85px;
-    height: 85px;
-    margin-left: 50px;
     transition: trasform .1s;
+
 }
 
 .Logo:hover{
     transform: scale(1.05);
 }
-
-.perfil{
-    transition: trasform .1s;
-
-}
-
-.perfil:hover{
-    transform: scale(1.05);
-}
-
 .table{
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 #fundoTabela{
  background-color: rgb(41, 41, 41);
-
 }
 
 #fundoResumo{
-background-color: rgb(59, 59, 59);
+ background-color: rgb(41, 41, 41);
 color: white;
 justify-content: space-around;
 text-align: left;
@@ -83,11 +75,31 @@ word-spacing: 7em;
 
 .titulo{
 margin-top: 50px;
-margin-left: 55px;
+margin-left: 280px;
 color:white;
 }
 .img2{
 width:80px;
 height:80px;
 margin-right: 20px;
+}
+
+.texto{
+color:white;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+.qr{
+width: 300px;
+height: 300px;
+margin-bottom: 30px;
+}
+
+#buttonFinalizar{
+margin-left: 45%;
+}
+
+
+#buttonVoltar{
+margin-left: 40%;
 }
