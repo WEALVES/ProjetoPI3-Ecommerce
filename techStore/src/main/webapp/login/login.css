@@ -25,8 +25,11 @@
     transform: scale(1.05);
 }
 
+form {
+    margin: auto
+}
 
-.loginBox{
+form .loginBox{
     margin: auto;
     margin-top: 50px;
     width: 400px;

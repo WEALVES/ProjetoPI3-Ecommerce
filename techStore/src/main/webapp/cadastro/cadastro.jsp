@@ -25,7 +25,7 @@
             <h1>Criar conta</h1>
             <div class="header">
                 <div class="Logo">
-                    <a href="index.jsp"><img src="../LOGO TECHSTORE/LOGOpng.png" alt="logo"></a>
+                    <a href="http://localhost:8080"><img src="../assets/logo-techstore/logo.png" alt="logo"></a>
                 </div>
             </div>
         </div>
@@ -51,12 +51,9 @@
                     <input type="text" class="input" name="user-endereco" id="user-endereco" placeholder="Endereço">
                 </div>  
             </div>
-            <a href="/create-user"> cadastrar</a>
             <button class="buttonLogin" type="submit">Cadastrar</button>
         </div>
     </form>
-
-
 </body>
 
 </html>

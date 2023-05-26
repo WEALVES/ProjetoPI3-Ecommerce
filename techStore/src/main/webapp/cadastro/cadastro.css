@@ -16,6 +16,9 @@
     font: 10pt Arial;
     
 }
+h1{
+    width: 300px;
+}
 
 .header h1 {
     position: absolute;
@@ -45,10 +48,11 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
 
-.loginBox{
+form .loginBox{
     margin: auto;
     margin-top: 50px;
     padding: 30px 60px;
