@@ -2,7 +2,13 @@
     width: 350px;
     height: 350px;
     margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.imgProduto img {
+    height: auto;
 }
 
 .infoProduto{

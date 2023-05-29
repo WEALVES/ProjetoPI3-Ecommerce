@@ -97,9 +97,52 @@
 
             <div class="hb" id="hb">
                 <h1>HISTÓRICO</h1>
-                <div class="pedido">
-                    <c:forEach var="produto" items="${produtos}">
+                <div class="pedidos">
+                    <c:forEach var="produto" items="${historico}">
+                        <div class="infos-pedido">
+                            <div class="cabecalho">
+                                <h3>${produto.nomeProduto}</h3>
+                                <h3>${produto.data}</h3>
+                            </div>
+                            <div class="main">
+                                <img src="${produto.imagem}" alt="">
+                                <p>Categoria: ${produto.categoria}</p>
+                                <p>Marca: ${produto.marca}</p>
+                            </div>
+                            <div class="column">
+                                <div class="valores">
+                                    <p>Valor unitário: R$ ${produto.preco}</p>
+                                    <p>Quantidade: ${produto.quantidadeVendida}</p>
+                                    <p>Total: R$ ${produto.valor}</p>
+                                    <p>Tipo de pagamento: ${produto.pagamento}</p>
+                                </div>
+                                <div class="entrega">
+                                    <h3>
+                                        Entrega
+                                    </h3>
+                                    <p>CEP: ${produto.cep}</p>
+                                    <p>Endereço: ${produto.endereco}</p>
+                                </div>
+                            </div>
+                        </div>
                     </c:forEach>
+
+
+
+                    <!-- private int idVenda;
+                    private int idProduto;
+                    private String nomeProduto;
+                    private String categoria;
+                    private String marca;
+                    private Double preco;
+                    private String descricao;
+                    private String imagem;
+                    private int quantidadeVendida;
+                    private String data;
+                    private Double valor;
+                    private String cep;
+                    private String endereco;
+                    private String pagamento; -->
                 </div>
                 <div class="linha"></div>
             </div>

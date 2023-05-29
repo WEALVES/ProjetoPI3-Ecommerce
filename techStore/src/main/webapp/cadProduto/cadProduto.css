@@ -43,24 +43,26 @@
     color: rgb(150, 91, 245);
 }
 
+.form {
+    margin: auto;
+}
 
 .loginBox{
     margin: auto;
     margin-top: 50px;
     width: 900px;
-    height: 400px;
+    height: 450px;
     background-color: rgb(59, 59, 59);
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 20px;
-    column-gap: 10px;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 40px;
 
 }
 
 .input{
-    width: 400px;
+    width: 350px;
     height: 40px;
     background-color: rgb(41, 41, 41);
     font-size: 18px;
@@ -68,8 +70,30 @@
     border: none;
     margin: 0;
     padding: 0 15px;
-    text-align: left; 
-    flex: 1;
+    text-align: left;
+    color: #fff;
+}
+
+.textarea {
+    color: #fff;
+    width: 350px;
+    height: 160px;
+    background-color: rgb(41, 41, 41);
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    margin: 0;
+    padding: 15px;
+    text-align: left;
+    resize: none;
+}
+
+.bloco {
+    width: 350px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .buttonLogin{
@@ -94,22 +118,24 @@ select {
     background-color: rgb(41, 41, 41);
     border: none;
     color: rgb(150, 91, 245);
-    width: 400px;
+    width: 380px;
     height: 40px;
     border-radius: 12px;
     font-size: 18px;
-    padding: 0 15px;
     text-align: left;
     margin: 0;
+    padding: 0 15px;
 }
 
 .insert-img {
     background-color: transparent;
     display: flex;
+    flex-direction: column;
     height: min-content;
     justify-content: center;
     align-items: center;
     border-radius: 12px;
+    width: 350px;
 }
 
 .insert-img input {
@@ -128,7 +154,8 @@ select {
 
 
 input[type="file" i] {
-    background-color: var(--bg-cinza);
+    border: none;
+    background-color: var(--color1);
 }
 
 input[type=number]::-webkit-inner-spin-button {

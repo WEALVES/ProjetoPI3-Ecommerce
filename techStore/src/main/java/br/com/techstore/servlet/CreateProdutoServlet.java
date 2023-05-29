@@ -28,7 +28,7 @@ public class CreateProdutoServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
         Map<String, String> parameters = uploadImage(req);
-
+        System.setProperty("file.encoding","UTF-8");
         String nome = parameters.get("nome");
         String categoria = parameters.get("categoria");
         System.out.println("categoria" + categoria);
@@ -63,12 +63,12 @@ public class CreateProdutoServlet extends HttpServlet {
 
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {
 
+        System.setProperty("file.encoding","UTF-8");
         Map<String, String> requestParameters = new HashMap<>();
 
         if (isMultipartContent(httpServletRequest)) {
 
             try {
-
                 DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
 
                 List<FileItem> fileItems = new ServletFileUpload(diskFileItemFactory).parseRequest(httpServletRequest);
