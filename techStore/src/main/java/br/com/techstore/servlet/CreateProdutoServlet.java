@@ -31,13 +31,11 @@ public class CreateProdutoServlet extends HttpServlet {
         System.setProperty("file.encoding","UTF-8");
         String nome = parameters.get("nome");
         String categoria = parameters.get("categoria");
-        System.out.println("categoria" + categoria);
         String marca = parameters.get("marca");
         Double preco = Double.valueOf(parameters.get("preco"));
         String descricao = parameters.get("descricao");
         int quantidade = Integer.parseInt(parameters.get("quantidade"));
         String imagePath = parameters.get("image");
-        System.out.println(imagePath);
 
 
         Produto produto = new Produto(nome, categoria, marca, preco, descricao, quantidade, imagePath);
@@ -80,7 +78,6 @@ public class CreateProdutoServlet extends HttpServlet {
                 }
 
             } catch (Exception ex) {
-                System.out.println("erro no create produto servlet");
 
                 requestParameters.put("image", "assets/imgProduct/default-car.jpg");
 
@@ -112,7 +109,6 @@ public class CreateProdutoServlet extends HttpServlet {
         String fileName = currentTime.toString().concat("-").concat(fileItem.getName().replace(" ", ""));
         String filePath = this.getServletContext().getRealPath("assets/imgProduct").concat(File.separator).concat(fileName);
         fileItem.write(new File(filePath));
-        System.out.println("RESULTADO: " + fileName);
         return fileName;
     }
 }

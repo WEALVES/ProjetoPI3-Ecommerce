@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LOGIN</title>
-        <link rel="stylesheet" href="./login.css">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="/login/login.css">
+        <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
@@ -17,13 +17,14 @@
         <div class="header">
             <h1>Login</h1>
                 <div class="Logo">
-                    <a href="/index.jsp"><img src="/assets/logo-techstore/logo.png" alt="logo"></a>
+                    <a href="/"><img src="/assets/logo-techstore/logo.png" alt="logo"></a>
                 </div>
         </div>
     </div>
 
     <form class="form" action="/find-user" method="get" enctype="multipart/form-data">
         <div class="loginBox">
+            <h3 style="height: auto; width: auto; color: white; font-size: 20px;">${message}</h3>
             <input type="email" id="email" name="email" class="input" placeholder="EMAIL" autocomplete="off">
             <input type="password" id="senha" name="senha" class="input" placeholder="SENHA">
             <a href="../cadastro/cadastro.jsp" class="linkCad">

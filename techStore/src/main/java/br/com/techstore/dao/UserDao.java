@@ -14,7 +14,7 @@ import java.util.List;
 
 public class UserDao {
     public boolean createUser(User user) {
-        String SQL = "INSERT INTO USUARIO (NAME, DATA_NASCIMENTO, CPF, EMAIL, SENHA, ENDERECO, CEP) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String SQL = "INSERT INTO USUARIO (NAME, DATA_NASCIMENTO, CPF, EMAIL, SENHA, ENDERECO, CEP, ADMIN) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
@@ -28,14 +28,13 @@ public class UserDao {
             preparedStatement.setString(5, user.getSenha());
             preparedStatement.setString(6, user.getEndereco());
             preparedStatement.setString(7, user.getCep());
+            preparedStatement.setString(8, user.getAdmin());
 
             preparedStatement.execute();
             connection.close();
-            System.out.println("Success in connection.");
             return true;
 
         } catch (Exception e) {
-            System.out.println("fail in connection.");
             System.out.println(e.getMessage());
             return false;
         }
@@ -49,8 +48,6 @@ public class UserDao {
 
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -74,15 +71,11 @@ public class UserDao {
 
             }
 
-            System.out.println("success in select * usuario");
-
             connection.close();
 
             return users;
 
         } catch (Exception e) {
-
-            System.out.println("fail in database connection");
             System.out.println(e.getMessage());
 
             return Collections.emptyList();
@@ -97,11 +90,7 @@ public class UserDao {
             User user = new User();
 
         try {
-
-
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -117,10 +106,9 @@ public class UserDao {
                 String userEndereco = resultSet.getString("ENDERECO");
                 String userEmail = resultSet.getString("EMAIL");
                 String userCep = resultSet.getString("CEP");
-
-                user = new User(userId ,userName, userNascimento, userCpf, userEmail, userSenha, userEndereco, userCep);
+                String userAdmin = resultSet.getString("ADMIN");
+                user = new User(userId ,userName, userNascimento, userCpf, userEmail, userSenha, userEndereco, userCep, userAdmin);
             }
-            System.out.println("success in select * usuario");
 
             connection.close();
 
@@ -128,7 +116,6 @@ public class UserDao {
 
         } catch (Exception e) {
 
-            System.out.println("fail in database connection");
             System.out.println(e.getMessage());
 
             return user;
@@ -143,22 +130,17 @@ public class UserDao {
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("success in database connection" + cpf);
-
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
             preparedStatement.setString(1, cpf);
 
             preparedStatement.executeUpdate();
-            System.out.println("success in select * usuario");
 
             connection.close();
 
             return true;
 
         } catch (Exception e) {
-
-            System.out.println("fail in database connection");
             System.out.println(e.getMessage());
 
             return false;

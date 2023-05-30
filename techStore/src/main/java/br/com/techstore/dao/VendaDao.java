@@ -33,13 +33,11 @@ public class VendaDao {
             preparedStatement.setString(9, venda.getPagamento());
             preparedStatement.execute();
             connection.close();
-            System.out.println("Sucess in connection, venda concluída");
 
             return true;
 
         } catch (Exception e) {
 
-            System.out.println("Fail na realização da venda");
             System.out.println(e.getMessage());
 
             return false;
@@ -53,8 +51,6 @@ public class VendaDao {
 
         try {
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -77,16 +73,11 @@ public class VendaDao {
                 Venda venda = new Venda(idVenda, idCliente, idProduto, nome, quantidade, data, valor, cep, endereco, pagamento);
 
                 historico.add(venda);
-                System.out.println(venda);
             }
-
-            System.out.println("Deu tudo certo, saindo da DAO");
 
             return historico;
 
         } catch (Exception e) {
-
-            System.out.println("Fail na realização da venda");
             System.out.println(e.getMessage());
 
             return null;

@@ -1,7 +1,5 @@
 /Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/servlet/CreateProdutoServlet.java
 /Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/filter/AuthenticationFilter.java
-/Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/model/Admin.java
-/Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/dao/AdminDao.java
 /Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/servlet/LoadProfileServlet.java
 /Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/model/Historico.java
 /Users/lucaslfs04/Documents/projects/ProjetoPI3-Ecommerce/techStore/src/main/java/br/com/techstore/servlet/LoginUserServlet.java

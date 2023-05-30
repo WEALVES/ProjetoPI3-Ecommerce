@@ -21,7 +21,6 @@ public class ListProdutoServlet extends HttpServlet {
         List<Produto> produtos = new ProdutoDao().findAllProdutos();
 
         req.setAttribute("produtos", produtos);
-        System.out.println(produtos);
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);
     }

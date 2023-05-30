@@ -19,10 +19,7 @@ public class SearchProdutoServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
     int id = Integer.parseInt(req.getParameter("id-produto"));
-    System.out.println("ID: " + id);
     Produto produtoSelecionado = new ProdutoDao().findProduto(id);
-
-    System.out.println("Resultado da busca: "+ produtoSelecionado);
 
     req.setAttribute("produto", produtoSelecionado);
 

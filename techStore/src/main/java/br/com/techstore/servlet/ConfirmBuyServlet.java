@@ -25,7 +25,6 @@ public class ConfirmBuyServlet extends HttpServlet {
         int idProduto = Integer.parseInt(req.getParameter("id-produto"));
         int idCliente = Integer.parseInt(req.getParameter("id-cliente"));
         int quantidade = Integer.parseInt(req.getParameter("quantidade-selecionada"));
-        System.out.println("Quantidade selecionada na confirmacao" + quantidade);
         String endereco = req.getParameter("endereco");
         String cep = req.getParameter("cep");
         String nome = req.getParameter("nome-cliente");

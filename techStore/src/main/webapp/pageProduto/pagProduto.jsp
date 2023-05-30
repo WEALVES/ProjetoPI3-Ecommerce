@@ -67,7 +67,7 @@
             </p>
             <form action="/buy-product">
                 <input type="hidden" name="id-produto" value="${produto.id}">
-                <button class="botaoCompra">
+                <button type="submit" class="botaoCompra">
                     Comprar
                 </button>
 

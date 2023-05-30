@@ -22,20 +22,21 @@ public class LoginUserServlet extends HttpServlet {
 
         req.setAttribute("user", user);
         req.setAttribute("cpf", user.getCpf());
-        if(user.getSenha().equals(senha)) {
-            System.out.println("Tudo certo, realizar sessão!");
-            req.getSession().setAttribute("id", user.getId());
-            req.getSession().setAttribute("loggedUser", user.getName());
-            req.getSession().setAttribute("endereco", user.getEndereco());
-            req.getSession().setAttribute("nascimento", user.getNascimento());
-            req.getSession().setAttribute("cep", user.getCep());
-            req.getSession().setAttribute("cpf", user.getCpf());
-            req.getSession().setAttribute("endereco", user.getEndereco());
-            req.getSession().setAttribute("email", user.getEmail());
-            req.getRequestDispatcher("/find-all-produtos").forward(req, resp);
+        if (user.getSenha() != null) {
+            if (user.getSenha().equals(senha)) {
+                req.getSession().setAttribute("admin", user.getAdmin());
+                req.getSession().setAttribute("id", user.getId());
+                req.getSession().setAttribute("loggedUser", user.getName());
+                req.getSession().setAttribute("endereco", user.getEndereco());
+                req.getSession().setAttribute("nascimento", user.getNascimento());
+                req.getSession().setAttribute("cep", user.getCep());
+                req.getSession().setAttribute("cpf", user.getCpf());
+                req.getSession().setAttribute("endereco", user.getEndereco());
+                req.getSession().setAttribute("email", user.getEmail());
+                req.getRequestDispatcher("/find-all-produtos").forward(req, resp);
+            }
         } else {
-            System.out.println("Deu tudo errado");
-            req.setAttribute("message", "Invalid credentials!");
+            req.setAttribute("message", "Credenciais Inválidas");
             req.getRequestDispatcher("/login/login.jsp").forward(req, resp);
         }
     }

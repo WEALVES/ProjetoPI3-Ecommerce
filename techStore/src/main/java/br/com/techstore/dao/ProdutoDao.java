@@ -36,13 +36,9 @@ public class ProdutoDao {
             preparedStatement.execute();
             connection.close();
 
-            System.out.println("Sucess in connection, teste cadastro");
-
             return true;
 
         } catch (Exception e) {
-
-            System.out.println("Fail in connection");
             System.out.println(e.getMessage());
 
             return false;
@@ -56,8 +52,6 @@ public class ProdutoDao {
         try {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
-
-            System.out.println("success in database connection,  Teste busca");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -83,7 +77,6 @@ public class ProdutoDao {
 
             }
 
-            System.out.println("success in select * produto");
 
             connection.close();
 
@@ -91,7 +84,6 @@ public class ProdutoDao {
 
         } catch (Exception e) {
 
-            System.out.println("fail in database connection, de produto");
             System.out.println(e.getMessage());
 
             return Collections.emptyList();
@@ -107,7 +99,6 @@ public class ProdutoDao {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
 
-            System.out.println("Sucesso na busca do produto selecionado");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -127,7 +118,6 @@ public class ProdutoDao {
                 Produto produto = new Produto(id, nome, categoria, marca, preco, descricao, quantidade, imagem);
                 return produto;
             }
-            System.out.println("success in select * produto");
             connection.close();
 
 
@@ -136,7 +126,6 @@ public class ProdutoDao {
 
         } catch (Exception e) {
 
-            System.out.println("fail in database connection, de produto");
             System.out.println(e.getMessage());
 
             return null;

@@ -10,6 +10,8 @@ public class User {
     private String endereco;
     private String cep;
 
+    private String admin;
+
     public User() {
 
     }
@@ -33,6 +35,27 @@ public class User {
         this.senha = senha;
         this.endereco = endereco;
         this.cep = cep;
+        this.admin = "false";
+    }
+
+    public User(int id, String name, String nascimento, String cpf, String email, String senha, String endereco, String cep, String admin) {
+        this.id = id;
+        this.name = name;
+        this.nascimento = nascimento;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.cep = cep;
+        this.admin = admin;
+    }
+
+    public String getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(String admin) {
+        this.admin = admin;
     }
 
     public int getId() {
@@ -110,6 +133,7 @@ public class User {
                 ", senha='" + senha + '\'' +
                 ", endereco='" + endereco + '\'' +
                 ", cep='" + cep + '\'' +
+                ", admin='" + admin + '\'' +
                 '}';
     }
 }

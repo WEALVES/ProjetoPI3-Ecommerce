@@ -18,24 +18,28 @@ public class BuyProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        int quantidade = Integer.parseInt(req.getParameter("quantidade-selecionada"));
-        System.out.println("Quantidade selecionada: " + quantidade);
-        int id = Integer.parseInt(req.getParameter("id-produto"));
-        Produto produtoSelecionado = new ProdutoDao().findProduto(id);
-
-        req.setAttribute("produto", produtoSelecionado);
-        req.setAttribute("valorCarrinho", String.valueOf(produtoSelecionado.getPreco() * quantidade));
-        if (quantidade > 0) {
-            req.setAttribute("quantidadeSelecionada", quantidade);
+        if (req.getSession().getAttribute("loggedUser") == null) {
+            resp.sendRedirect("/login/login.jsp");
         } else {
-            req.setAttribute("quantidadeSelecionada", String.valueOf(1));
-        }
+            int quantidade = Integer.parseInt(req.getParameter("quantidade-selecionada"));
+            int id = Integer.parseInt(req.getParameter("id-produto"));
+            Produto produtoSelecionado = new ProdutoDao().findProduto(id);
 
-        if (quantidade <= produtoSelecionado.getQuantidade()) {
-            req.getRequestDispatcher("/carrinho/carrinho.jsp").forward(req, resp);
-        } else {
-            req.setAttribute("messageQuantidade", "Não temos a quantidade escolhida no estoque, o estoque possui " + produtoSelecionado.getQuantidade() + " unidades");
-            req.getRequestDispatcher("/pageProduto/pagProduto.jsp").forward(req, resp);
+            req.setAttribute("produto", produtoSelecionado);
+            req.setAttribute("valorCarrinho", String.valueOf(produtoSelecionado.getPreco() * quantidade));
+            if (quantidade > 0) {
+                req.setAttribute("quantidadeSelecionada", quantidade);
+            } else {
+                req.setAttribute("quantidadeSelecionada", String.valueOf(1));
+            }
+
+            if (quantidade <= produtoSelecionado.getQuantidade()) {
+                req.getRequestDispatcher("/carrinho/carrinho.jsp").forward(req, resp);
+            } else {
+                req.setAttribute("messageQuantidade", "Não temos a quantidade escolhida no estoque, o estoque possui " + produtoSelecionado.getQuantidade() + " unidades");
+                req.getRequestDispatcher("/pageProduto/pagProduto.jsp").forward(req, resp);
+            }
+
         }
 
 

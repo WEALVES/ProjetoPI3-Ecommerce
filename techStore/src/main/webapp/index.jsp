@@ -14,7 +14,7 @@
 
 <body>
   <div class="header_Border">
-    <a href="/find-all-produtos">Carregar</a>
+    <!-- <a href="/find-all-produtos">Carregar</a> -->
     <div class="header">
       <div class="filter">
         <img src="/assets/option.png" alt="filtro" onclick="clickMenu()">
@@ -24,16 +24,15 @@
       </div>
       <div class="search_Bar">
         <input type="search" class="search" placeholder="Buscar">
-        <img src="./assets/lupa.png" class="btnBusca">
-      </div>
-      <div class="carrinho">
-        <a href="./carrinho/carrinho.jsp"><img src="./assets/carrinho.png" alt="Carrinho Compras"></a>
+        <img src="/assets/lupa.png" class="btnBusca">
       </div>
 
       <c:if test="${sessionScope.loggedUser != null}">
-        <div class="cadProduto">
-          <a href="./cadProduto/cadProduto.jsp"><img src="./assets/pacote.png" alt="Cadastrar Produtos"></a>
-        </div>
+        <c:if test="${sessionScope.admin == true}" >
+          <div class="cadProduto">
+            <a href="/cadProduto/cadProduto.jsp"><img src="./assets/pacote.png" alt="Cadastrar Produtos"></a>
+          </div>
+        </c:if>
         <div class="infos">
           <span>${sessionScope.loggedUser}
           </span>
@@ -41,9 +40,9 @@
         </div>
         <div class="profile">
           <form action="/perfil" method="get">
-            <button style="width: 50px; height: 50px;" type="submit">
+            <button style="width: 50px; height: 50px; background-color: transparent; border: none;" type="submit">
               <input type="hidden" name="id-cliente" value="${sessionScope.id}">
-              <img src="./assets/perfil.png" alt="perfil">
+              <img src="/assets/perfil.png" alt="perfil">
             </button>
           </form>
         </div>
@@ -96,6 +95,12 @@
       }
     }
 
+    if (window.location.href == "http://localhost:8080/") {
+      window.location.href = "http://localhost:8080/find-all-produtos"
+    }
+
+
+    console.log(window.location.href);
   </script>
 </body>
 
