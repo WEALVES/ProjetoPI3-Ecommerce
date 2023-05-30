@@ -132,4 +132,33 @@ public class ProdutoDao {
         }
         return null;
     }
+
+    public void deleteProductByID(int pId){
+
+
+            String SQL = "DELETE PRODUTO WHERE ID_PRODUTO = ?";
+
+            try {
+
+                Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+                preparedStatement.setInt(1, pId);
+                preparedStatement.execute();
+
+                System.out.println("success on delete produto with id: " + pId);
+
+                connection.close();
+
+            } catch (Exception e) {
+
+                System.out.println("fail in database connection erro aqui");
+
+            }
+
+
+    }
+
 }

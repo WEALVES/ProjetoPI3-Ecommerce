@@ -65,6 +65,9 @@
   </div>
   <section class="main_Screen">
     <c:forEach var="produto" items="${produtos}">
+
+
+
       <form action="/search-produto" method="get" class="produto">
         <button type="submit" class="produto-button block">
           <input type="hidden" name="id-produto" value="${produto.id}">
@@ -74,8 +77,23 @@
           </div>
           <h3>${produto.nome}</h3>
           <p class="preco">R$ ${produto.preco}</p>
+
+
+
         </button>
       </form>
+
+
+
+      <c:if test="${sessionScope.admin == true}" >
+                        <a href="/cadProduto/cadProduto.jsp"><img class = "alterar" src="./assets/alterar.png" alt="Alterar"</a>
+     <form action="/delete-produto" method="post">
+                                        <input type="hidden" id="id" name="id" value="${produto.id}">
+                                        <button type="submit">Delete</button>
+                                    </form>
+                         <img class="excluir" src="/assets/excluir.png" alt="">
+                         </c:if>
+
     </c:forEach>
 
 
