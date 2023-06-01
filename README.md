@@ -32,19 +32,16 @@ Lista de Funcionalidades - E-Commerc de Informática
 # Protótipos das páginas
 
 ### - Página de login
-![Página de Login](./Docs/Prototipos/PageLogin.png)
+![Página de Login](./Docs/Prototipos/Login.png)
 
 ### - Página de criação de conta
-![Página de Criação de Login](./Docs/Prototipos/PageCreateAccount.png)
+![Página de Criação de Login](./Docs/Prototipos/CriarConta.png)
 
 ### - Tela de cadastro de produtos
 ![Página de Cadastro de Produtos](./Docs/Prototipos/CadastroProduto.png)
 
-### - Página principal
-![Página inicial](./Docs/Prototipos/TelaPrincipal.png)
-
-### - Página de produtos
-![Página de produtos](./Docs/Prototipos/TelaProdutos.png)
+### - Tela inicial
+![Tela inicial](./Docs/Prototipos/TelaInicial.png)
 
 ### - Carrinho de compras
 ![Página de carrinho de compras](./Docs/Prototipos/CarrinhoCompras.png)
