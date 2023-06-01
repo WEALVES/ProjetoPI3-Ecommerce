@@ -161,4 +161,40 @@ public class ProdutoDao {
 
     }
 
+    public void updateProduto(Produto produto) {
+
+        String SQL = "UPDATE PRODUTO SET NOME_PRODUTO = ?, CATEGORIA = ?, MARCA = ?, PRECO = ?, DESCRICAO = ?, QTD = ?, IMAGE = ? WHERE ID_PRODUTO = ?";
+
+        try {
+
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
+
+            System.out.println("success in database connection");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+
+            preparedStatement.setString(1, produto.getNome());
+            preparedStatement.setString(2, produto.getCategoria());
+            preparedStatement.setString(3, produto.getMarca());
+            preparedStatement.setDouble(4, produto.getPreco());
+            preparedStatement.setString(5, produto.getDescricao());
+            preparedStatement.setInt(6, produto.getQuantidade());
+            preparedStatement.setString(7, produto.getImagem());
+            preparedStatement.setInt(8, produto.getId());
+            preparedStatement.execute();
+
+            System.out.println("success in update produto");
+
+            connection.close();
+
+        } catch (Exception e) {
+
+            System.out.println("fail in database connection");
+            System.out.println("Error: " + e.getMessage());
+
+        }
+
+    }
+
 }

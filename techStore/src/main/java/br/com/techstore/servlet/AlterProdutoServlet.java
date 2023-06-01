@@ -7,14 +7,13 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -22,8 +21,8 @@ import java.util.Map;
 
 import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipartContent;
 
-@WebServlet("/create-produto")
-public class CreateProdutoServlet extends HttpServlet {
+@WebServlet("/alter-produto")
+public class AlterProdutoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
@@ -43,17 +42,7 @@ public class CreateProdutoServlet extends HttpServlet {
 
         ProdutoDao produtoDao = new ProdutoDao();
 
-
-        if(nome.isBlank()){
-
-            produtoDao.createProduto(produto);
-
-
-        }else{
-            produtoDao.updateProduto(produto);
-
-        }
-
+        produtoDao.updateProduto(produto);
 
         resp.sendRedirect("/find-all-produtos");
 

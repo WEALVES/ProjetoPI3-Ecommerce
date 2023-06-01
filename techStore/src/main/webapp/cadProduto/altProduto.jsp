@@ -16,7 +16,7 @@
 <body>
     <div class="header_Border">
         <div class="header">
-            <h1>Cadastrar produto</h1>
+            <h1>Alterar produto</h1>
             <div class="Logo">
                 <a href="/find-all-produtos"><img src="/assets/logo-techstore/logo.png" alt="logo"></a>
             </div>
@@ -25,7 +25,7 @@
 
     <span>${requestScope.message}</span>
 
-    <form class="form" action="/create-produto" method="post" enctype="multipart/form-data">
+    <form class="form" action="/alter-produto" method="post" enctype="multipart/form-data">
         <div class="loginBox">
             <input type="hidden" id="id" name="id" value="${param.id}">
             <input type="text" class="input" name="nome" id="nome" placeholder="Nome do produto" value="${param.nome}">
@@ -44,9 +44,9 @@
                     <option value="Roteador">roteador</option>
                     <option value="Periférico">Periférico</option>
                 </select>
-                <div class="insert-img" value="${param.image}">
+                <div class="insert-img" >
                     <label for="file">Choose file</label>
-                    <input type="file" name="file" id="file">
+                    <input type="file" name="file" id="file" value="${param.image}">
                 </div>
             </div>
             <textarea type="text" class="textarea" name="descricao" id="descricao" placeholder="Descrição" value="${param.descricao}"></textarea>

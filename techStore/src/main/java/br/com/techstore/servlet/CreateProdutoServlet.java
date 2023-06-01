@@ -30,9 +30,9 @@ public class CreateProdutoServlet extends HttpServlet {
         Map<String, String> parameters = uploadImage(req);
         System.setProperty("file.encoding","UTF-8");
         String nome = parameters.get("nome");
+        Double preco = Double.valueOf(parameters.get("preco"));
         String categoria = parameters.get("categoria");
         String marca = parameters.get("marca");
-        Double preco = Double.valueOf(parameters.get("preco"));
         String descricao = parameters.get("descricao");
         int quantidade = Integer.parseInt(parameters.get("quantidade"));
         String imagePath = parameters.get("image");
@@ -43,18 +43,18 @@ public class CreateProdutoServlet extends HttpServlet {
 
         boolean isSuccessOnUpload = new ProdutoDao().createProduto(produto);
 
-        if(isSuccessOnUpload) {
 
-            resp.sendRedirect("/find-all-produtos");
+            if(isSuccessOnUpload) {
 
-        } else {
+                resp.sendRedirect("/find-all-produtos");
 
-            req.setAttribute("message", "fail on upload image");
+            } else {
 
-            req.getRequestDispatcher("/cadProduto/cadProduto.jsp").forward(req, resp);
+                req.setAttribute("message", "fail on upload image");
 
-        }
+                req.getRequestDispatcher("/cadProduto/cadProduto.jsp").forward(req, resp);
 
+            }
 
 
     }

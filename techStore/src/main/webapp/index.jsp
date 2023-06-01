@@ -90,6 +90,7 @@
      <form action="/delete-produto" method="post">
                                         <input type="hidden" id="id" name="id" value="${produto.id}">
                                         <button type="submit">Delete</button>
+                                        <a href="/cadProduto/altProduto.jsp?id=${produto.id}&nome=${produto.nome}&preco=${produto.preco}&quantidade=${produto.quantidade}&marca=${produto.marca}&categoria=${produto.categoria}&descricao=${produto.descricao}">Update</a>
                                     </form>
                          <img class="excluir" src="/assets/excluir.png" alt="">
                          </c:if>

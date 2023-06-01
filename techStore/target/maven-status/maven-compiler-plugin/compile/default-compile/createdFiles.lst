@@ -1,2 +1,3 @@
 br\com\techStore\servlet\DeleteProductServelet.class
+br\com\techStore\servlet\AlterProdutoServlet.class
 br\com\techStore\model\Historico.class
