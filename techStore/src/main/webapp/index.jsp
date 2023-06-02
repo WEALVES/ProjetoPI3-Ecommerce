@@ -17,7 +17,7 @@
         <!-- <a href="/find-all-produtos">Carregar</a> -->
         <div class="header">
 
-        <div class="about">
+        <div class="about" style="width: 30px;">
         <a href="/sobre/sobre.jsp"> <img src="/assets/informacoes.png" alt="sobre"></a>
         </div>
 
