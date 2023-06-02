@@ -205,14 +205,13 @@ div.header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 800px;
-  height: 100%;
+  width: 1000px;
+  height: auto;
   margin: auto;
   margin-top: 160px;
   background-color: rgb(59, 59, 59);
   border-radius: 6px;
 
-  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
