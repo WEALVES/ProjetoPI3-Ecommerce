@@ -12,13 +12,15 @@
       <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 </head>
 
-<body>
-  <div class="header_Border">
-    <!-- <a href="/find-all-produtos">Carregar</a> -->
-    <div class="header">
-      <!-- <div class="filter">
-        <img src="/assets/option.png" alt="filtro" onclick="clickMenu()">
-      </div> -->
+        <body>
+         <div class="header_Border">
+        <!-- <a href="/find-all-produtos">Carregar</a> -->
+        <div class="header">
+
+        <div class="about">
+        <a href="/sobre/sobre.jsp"> <img src="/assets/informacoes.png" alt="sobre"></a>
+        </div>
+
       <div class="Logo">
         <img src="/assets/logo-techstore/logo.png" alt="logo">
       </div>
