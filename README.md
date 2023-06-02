@@ -55,6 +55,9 @@ Lista de Funcionalidades - E-Commerc de Informática
 ### - Minha conta part II
 ![Página minha conta](./Docs/Prototipos/TELA_MINHA_CONTA.PNG)
 
+### - Tela de adiministrador
+![Página de adiministrador](./Docs/Prototipos/TelaADM.PNG)
+
 ## [Link dos protótipos no FIGMA](https://www.figma.com/file/QCVCo9zzUu166ASxhm5xYO/Login%2FCadastro%2FCadastroProdutos?node-id=0%3A1&t=YhoIPclcfKGg73mN-1)
 
 
