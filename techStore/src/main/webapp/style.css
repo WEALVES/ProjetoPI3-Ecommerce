@@ -262,7 +262,8 @@ a {
 
 form {
   width: min-content;
-  height: 450px;
+  height: min-content;
+  margin-bottom: 30px;
 }
 
 .produto-button {
@@ -271,7 +272,6 @@ form {
     flex-direction: column;
     width: 250px;
     height: auto;
-    margin: 20px;
     border-radius: 30px;
     background-color: #FFF;
     border: none;
@@ -320,4 +320,48 @@ form {
     width: 40px;
     height: auto;
     margin: 0 auto 15px 15px;
+}
+
+
+.area-admin {
+  width: 250px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.area-admin form {
+  width: 45%;
+}
+
+.area-admin .btn {
+  background-color: var(--roxo-claro);
+  border: none;
+  width: 100%;
+  color: #fff;
+  border-radius: 15px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+}
+
+.area-admin .btn p {
+  width: auto;
+  height: auto;
+}
+
+.area-admin .btn img {
+  width: 20px;
+  height: auto;
+  margin: 0 0 0 8px;
+  padding: 0;
+}
+
+.area-admin .update-btn {
+  width: 45%;
 }

@@ -148,8 +148,6 @@ public class ProdutoDao {
                 preparedStatement.setInt(1, pId);
                 preparedStatement.execute();
 
-                System.out.println("success on delete produto with id: " + pId);
-
                 connection.close();
 
             } catch (Exception e) {
@@ -169,7 +167,6 @@ public class ProdutoDao {
 
             Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa","sa");
 
-            System.out.println("success in database connection");
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
@@ -184,7 +181,6 @@ public class ProdutoDao {
             preparedStatement.setInt(8, produto.getId());
             preparedStatement.execute();
 
-            System.out.println("success in update produto");
 
             connection.close();
 

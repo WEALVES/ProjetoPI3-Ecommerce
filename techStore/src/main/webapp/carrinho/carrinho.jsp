@@ -16,7 +16,9 @@
   <div class="header_Border">
     <div class="header">
       <div class="Logo">
-        <a href="/find-all-produtos"><img class="img" src="/assets/logo-techstore/logo.png" alt="logo"></a>
+        <a href="/find-all-produtos">
+          <img style="width: 100%; height: 100%;" class="img" src="/assets/logo-techstore/logo.png" alt="logo">
+        </a>
       </div>
     </div>
   </div>

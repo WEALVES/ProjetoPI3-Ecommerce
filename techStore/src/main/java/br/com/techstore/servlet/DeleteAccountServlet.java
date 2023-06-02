@@ -1,6 +1,7 @@
 package br.com.techstore.servlet;
 
 import br.com.techstore.dao.UserDao;
+import br.com.techstore.dao.VendaDao;
 import br.com.techstore.model.User;
 
 import javax.servlet.ServletException;
@@ -16,6 +17,9 @@ public class DeleteAccountServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
     String cpfUser = req.getParameter("cpf");
+    int idUser = Integer.parseInt((String) req.getSession().getAttribute("id").toString());
+    System.out.println(idUser);
+    boolean deletouVendas = new VendaDao().deleteVendas(idUser);
     boolean deletou = new UserDao().deleteUser(cpfUser);
 
     if(deletou) {

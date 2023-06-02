@@ -85,5 +85,29 @@ public class VendaDao {
         }
     }
 
+    public boolean deleteVendas(int idUser) {
+
+        String SQL = "DELETE FROM VENDA WHERE ID_CLIENTE LIKE ?";
+
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:h2:~/test", "sa", "sa");
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setInt(1, idUser);
+
+            preparedStatement.executeUpdate();
+
+            connection.close();
+
+            return true;
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+
+            return false;
+        }
+    }
+
 
 }

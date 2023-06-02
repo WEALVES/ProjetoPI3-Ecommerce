@@ -26,8 +26,6 @@ public class LoadProfileServlet extends HttpServlet {
 
         int idCliente = Integer.parseInt(req.getParameter("id-cliente"));
 
-        System.out.println("id do cliente");
-
         List<Venda> compras = new VendaDao().historicoVenda(idCliente);
 
         List<Historico> historico = new ArrayList<Historico>();

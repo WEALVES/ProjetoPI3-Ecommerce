@@ -16,7 +16,7 @@
     <div class="header_Border">
         <div class="header">
             <div class="Logo">
-                <a href="/index.jsp">
+                <a href="/find-all-produtos">
                     <img src="/assets/logo-techstore/logo.png" alt="logo">
                 </a>
             </div>

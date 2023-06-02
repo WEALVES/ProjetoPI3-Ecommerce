@@ -16,7 +16,7 @@
 <body>
     <div class="header_Border">
         <div class="header">
-            <h1>Cadastrar produto</h1>
+            <h1 style="width: auto;">Cadastrar produto</h1>
             <div class="Logo">
                 <a href="/find-all-produtos"><img src="/assets/logo-techstore/logo.png" alt="logo"></a>
             </div>
@@ -35,6 +35,9 @@
             <div class="bloco" value="${param.categoria}">
                 <select class="Categoria" id="categoria" name="categoria">
                     <option value="Não selecionado">Não definido</option>
+                    <option value="Computador">Computador</option>
+                    <option value="Notebook">Notebook</option>
+                    <option value="Celular">Celular</option>
                     <option value="Placa Mãe">Placa mãe</option>
                     <option value="Processador">Processador</option>
                     <option value="Memoria Ram">Memória RAM</option>
@@ -43,6 +46,8 @@
                     <option value="Gabinete">Gabinete</option>
                     <option value="Roteador">roteador</option>
                     <option value="Periférico">Periférico</option>
+                    <option value="Áudio e vídeo">Áudio e Vídeo</option>
+                    <option value="Outros">Outros</option>
                 </select>
                 <div class="insert-img" value="${param.image}">
                     <label for="file">Choose file</label>

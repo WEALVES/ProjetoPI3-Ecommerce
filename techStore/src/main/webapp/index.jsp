@@ -16,9 +16,9 @@
   <div class="header_Border">
     <!-- <a href="/find-all-produtos">Carregar</a> -->
     <div class="header">
-      <div class="filter">
+      <!-- <div class="filter">
         <img src="/assets/option.png" alt="filtro" onclick="clickMenu()">
-      </div>
+      </div> -->
       <div class="Logo">
         <img src="/assets/logo-techstore/logo.png" alt="logo">
       </div>
@@ -28,7 +28,7 @@
       </div>
 
       <c:if test="${sessionScope.loggedUser != null}">
-        <c:if test="${sessionScope.admin == true}" >
+        <c:if test="${sessionScope.admin == true}">
           <div class="cadProduto">
             <a href="/cadProduto/cadProduto.jsp"><img src="./assets/pacote.png" alt="Cadastrar Produtos"></a>
           </div>
@@ -59,41 +59,45 @@
 
     </div>
   </div>
-
-  <div id="menuFilter">
-
-  </div>
   <section class="main_Screen">
     <c:forEach var="produto" items="${produtos}">
-
-
-
-      <form action="/search-produto" method="get" class="produto">
-        <button type="submit" class="produto-button block">
-          <input type="hidden" name="id-produto" value="${produto.id}">
-          <p class="categoria-produto">${produto.categoria}</p>
-          <div class="content-img">
-            <img src="${produto.imagem}" alt="">
+      <div
+        style="width: 250px; display: flex; flex-direction: column; height: min-content; justify-content: center;     margin: 20px;">
+        <form action="/search-produto" method="get" class="produto">
+          <button type="submit" class="produto-button block">
+            <input type="hidden" name="id-produto" value="${produto.id}">
+            <p class="categoria-produto">${produto.categoria}</p>
+            <div class="content-img">
+              <img src="${produto.imagem}" alt="">
+            </div>
+            <h3>${produto.nome}</h3>
+            <p class="preco">R$ ${produto.preco}</p>
+          </button>
+        </form>
+        <c:if test="${sessionScope.admin == true}">
+          <div class="area-admin">
+            <form action="/delete-produto" method="post">
+              <input type="hidden" id="id" name="id" value="${produto.id}">
+              <button class="btn" type="submit">
+                <p>
+                  Delete
+                </p>
+                <img class="excluir" src="/assets/excluir.png" alt="">
+              </button>
+            </form>
+            <form action="update-product" method="get">
+              <input type="hidden" id="id" name="id" value="${produto.id}">
+              <button class="btn" type="submit">
+                <p>
+                  Update
+                </p>
+                <img class="alterar" src="/assets/alterar.png" alt="Alterar">
+              </button>
+              </a>
+            </form>
           </div>
-          <h3>${produto.nome}</h3>
-          <p class="preco">R$ ${produto.preco}</p>
-
-
-
-        </button>
-      </form>
-
-
-
-      <c:if test="${sessionScope.admin == true}" >
-                        <a href="/cadProduto/cadProduto.jsp"><img class = "alterar" src="./assets/alterar.png" alt="Alterar"</a>
-     <form action="/delete-produto" method="post">
-                                        <input type="hidden" id="id" name="id" value="${produto.id}">
-                                        <button type="submit">Delete</button>
-                                        <a href="/cadProduto/altProduto.jsp?id=${produto.id}&nome=${produto.nome}&preco=${produto.preco}&quantidade=${produto.quantidade}&marca=${produto.marca}&categoria=${produto.categoria}&descricao=${produto.descricao}">Update</a>
-                                    </form>
-                         <img class="excluir" src="/assets/excluir.png" alt="">
-                         </c:if>
+        </c:if>
+      </div>
 
     </c:forEach>
 
