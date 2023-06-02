@@ -7,8 +7,6 @@ Lista de Funcionalidades - E-Commerc de Informática
 - Cadastro de produtos
 - Página inicial
 - banner
-- Barra de pesquisa (?)
-- filtro de categorias de produtos
 - Pagina de produtos
 - Carrinho de compras
 - pagina de pagamento
@@ -58,9 +56,6 @@ Lista de Funcionalidades - E-Commerc de Informática
 ### - Tela de adiministrador
 ![Página de adiministrador](./Docs/Prototipos/TelaADM.PNG)
 
-## [Link dos protótipos no FIGMA](https://www.figma.com/file/QCVCo9zzUu166ASxhm5xYO/Login%2FCadastro%2FCadastroProdutos?node-id=0%3A1&t=YhoIPclcfKGg73mN-1)
-
-
 # - Identidade visual
 - Paleta de cores
 ![Paleta de cores](https://user-images.githubusercontent.com/99226403/232334571-88d769a9-a8da-44bf-b913-eebe5a1da223.PNG)
@@ -70,7 +65,7 @@ Lista de Funcionalidades - E-Commerc de Informática
 ![Logo_02](https://user-images.githubusercontent.com/99226403/232334459-ce548ded-ffcf-464e-9860-cc168094d4ac.png) 
 ![Prancheta 6_2](https://user-images.githubusercontent.com/99226403/232334613-397881b5-57a1-4315-a013-71afabab8281.png)
 
--  ## [Link arquivos identidade visual](https://encurtador.com.br/yz036)
+- ## [Link arquivos identidade visual](https://encurtador.com.br/yz036)
 - ## [Cores em HEXA](https://encurtador.com.br/cmzAE)
 
 ## Script do banco de dados: 
