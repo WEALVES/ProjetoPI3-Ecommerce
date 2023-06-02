@@ -155,15 +155,15 @@ div.header {
   transform: scale(1.05);
 }
 
-/*FILTRO*/
-.filter {
+/*SOBRE A EMPRESA*/
+.about {
   height: 30px;
   width: 30px;
   margin: 10px;
   transition: trasform 0.1s;
 }
 
-.filter:hover {
+.about:hover {
   transform: scale(1.05);
 }
 
